@@ -76,6 +76,13 @@ const AcademicProfile = () => {
     preprints: [
       {
         year: "2025",
+        title: "The Digital Landscape of God: Narrative, Visuals and Viewer Engagement of Religious Videos on YouTube",
+        authors: "Rongyi Chen, Ziyan Xin, Qing Xiao, Ruiwei Xiao, Jingjia Xiao, Bingbing Zhang, Hong Shen, Zhicong Lu",
+        repository: "arXiv",
+        id: "https://arxiv.org/abs/2505.20623"
+      },
+      {
+        year: "2025",
         title: "Institutionalizing Folk Theories of Algorithms: How Multi-Channel Networks (MCNs) Govern Algorithmic Labor in Chinese Live-Streaming Industry",
         authors: "Qing Xiao, Rongyi Chen, Jingjia Xiao, Tianyang Fu, Alice Qian Zhang, Xianzhe Fan, Bingbing Zhang, Zhicong Lu, Hong Shen",
         repository: "arXiv",
@@ -89,6 +96,13 @@ const AcademicProfile = () => {
         authors: "Yalong Xiao, Rongyi Chen, Qing Xiao, Chengzhang Zhu, Jie Feng",
         journal: "International Journal of Human–Computer Interaction (HIHC)",
         doi: "10.1080/10447318.2025.2524493"
+      },
+      {
+        year: "2025",
+        title: "Artists and their poor: economic and symbolic inequality in distorted China's post-pandemic art subsidy policies",
+        authors: "Jingjia Xiao, Qing Xiao, Rongyi Chen",
+        journal: "Cultural Trends",
+        doi: "10.1080/09548963.2025.2557215"
       },
       {
         year: "2024",
@@ -611,6 +625,27 @@ const industryData = [
                   <div className="mt-8">
                     <h3 className="text-xl font-semibold mb-4 text-gray-800">Awards</h3>
                     <div className="space-y-4">
+                                          <div className="flex items-start">
+                        <span className="text-xl mr-2 mt-0.5">🏆</span>
+                        <div>
+                          <p className="text-gray-800 font-medium">National Scholarship</p>
+                          <p className="text-gray-600">Ministry of Education of the People's Republic of China, 2025</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start">
+                        <span className="text-xl mr-2 mt-0.5">🎖️</span>
+                        <div>
+                          <p className="text-gray-800 font-medium">First Class Academic Scholarship</p>
+                          <p className="text-gray-600">Central South University, 2025</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start">
+                        <span className="text-xl mr-2 mt-0.5">🏆</span>
+                        <div>
+                          <p className="text-gray-800 font-medium">GEM Innovation and Practice Award</p>
+                          <p className="text-gray-600">Central South University, 2025</p>
+                        </div>
+                      </div>
                       <div className="flex items-start">
                         <span className="text-xl mr-2 mt-0.5">🎖️</span>
                         <div>
