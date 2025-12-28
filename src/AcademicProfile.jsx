@@ -79,7 +79,8 @@ const AcademicProfile = () => {
 
   const t = content[language];
   const socialMedia = [
-    { name: "Scholar", icon: Award, url: "https://scholar.google.com/citations?user=aFi4Wd0AAAAJ" },
+    { name: "Google Scholar", icon: GraduationCap, url: "https://scholar.google.com/citations?user=aFi4Wd0AAAAJ" },
+    { name: "CV", icon: FileText, url: "/files/RongyiChen_CV.pdf", isDownload: true },
     { name: "RedNote", icon: BookOpen, url: "https://www.xiaohongshu.com/user/profile/6633970e000000000303278d" },
     { name: "GitHub", icon: Github, url: "https://github.com/Likunnan" }
   ];
@@ -206,8 +207,8 @@ const AcademicProfile = () => {
             </div>
             <div className="flex flex-wrap gap-1.5 mb-4">{t.profile.researchAreas.map((area, i) => <span key={i} className="px-2 py-1 bg-gradient-to-r from-purple-100 to-violet-100 text-purple-700 rounded-full text-sm">{area}</span>)}</div>
             <div className="flex justify-center gap-3 pb-4 border-b border-purple-100">
-              <a href={`mailto:${t.profile.email}`} className="w-9 h-9 bg-purple-100 hover:bg-purple-200 rounded-full flex items-center justify-center transition-colors"><Mail size={16} className="text-purple-600" /></a>
-              {socialMedia.map((s, i) => { const Icon = s.icon; return <a key={i} href={s.url} target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-purple-100 hover:bg-purple-200 rounded-full flex items-center justify-center transition-colors"><Icon size={16} className="text-purple-600" /></a>; })}
+              <a href={`mailto:${t.profile.email}`} className="w-9 h-9 bg-purple-100 hover:bg-purple-200 rounded-full flex items-center justify-center transition-colors" title="Email"><Mail size={16} className="text-purple-600" /></a>
+              {socialMedia.map((s, i) => { const Icon = s.icon; return <a key={i} href={s.url} target={s.isDownload ? "_self" : "_blank"} rel="noopener noreferrer" download={s.isDownload ? true : undefined} className="w-9 h-9 bg-purple-100 hover:bg-purple-200 rounded-full flex items-center justify-center transition-colors" title={s.name}><Icon size={16} className="text-purple-600" /></a>; })}
             </div>
             <div className="pt-4"><button onClick={() => setLanguage(language === 'en' ? 'zh' : 'en')} className="w-full flex items-center justify-center gap-1.5 px-3 py-2 bg-gradient-to-r from-purple-500 to-violet-500 text-white rounded-lg shadow hover:from-purple-600 hover:to-violet-600 transition-all text-base"><Globe size={14} /><span>{language === 'en' ? '中文' : 'EN'}</span></button></div>
           </motion.div>
