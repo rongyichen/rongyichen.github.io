@@ -146,20 +146,18 @@ const AcademicProfile = () => {
       { title: "International Public Opinion Dynamics in Major Emergencies on Social Media", titleZh: "社交媒体重大突发事件国际舆情动态研究", meta: "2024-2025, Central South University", metaZh: "2024-2025, 中南大学人文学院", role: "RA", funding: "MOE Youth Fund: 22YJC860007" },
       { title: "Live Stream Host Professional Ethics and Industry Standards Development", titleZh: "直播主播职业道德提升与行业标准制定", meta: "2021, Communication University of China", metaZh: "2021, 中国传媒大学传播研究院", role: "RA", funding: "National Standard: HW21144" },
       { title: "Representation of Chinese Ethnicities in Global Social Media", titleZh: "全球社交媒体中中国各民族形象及相关话语研究", meta: "2022-2023, Communication University of China", metaZh: "2022-2023, 中国传媒大学传播研究院", role: "RA", funding: "Ethnic Affairs Commission: 2021-GMC-052" },
-      { title: "Adolescents' Digital Literacy in Media Convergence Environment", titleZh: "媒介融合环境下青少年数字素养与价值取向培育", meta: "2020-2021, Communication University of China", metaZh: "2020-2021, 中国传媒大学传播研究院", role: "RA", funding: "NSF China: 19BXW087" },
-      { title: "Enterprise Survey for Innovation and Entrepreneurship in China (ESIEC)", titleZh: "中国企业创新创业调查(ESIEC)", meta: "2023, Peking University", metaZh: "2023, 北京大学企业大数据研究中心", role: "RA", funding: "" },
-      { title: "Mianzhu Children's Cognitive and Non-cognitive Abilities Development Tracking", titleZh: "绵竹儿童认知与非认知能力发展追踪项目", meta: "2020, Jinan University", metaZh: "2020, 暨南大学调查数据中心", role: "RA", funding: "" }
+      { title: "Adolescents' Digital Literacy in Media Convergence Environment", titleZh: "媒介融合环境下青少年数字素养与价值取向培育", meta: "2020-2021, Communication University of China", metaZh: "2020-2021, 中国传媒大学传播研究院", role: "RA", funding: "NSF China: 19BXW087" }
     ]
   };
 
   const portfolioData = [
-    { title: "Shanghai Film Festival", titleZh: "上海电影节", org: "Bazaar", year: "2023", emoji: "🎬", url: "https://mp.weixin.qq.com/s/AEDOdbB2HCHjRcE0gEUDaQ" },
-    { title: "Our Days Spring Movie", titleZh: "我们的日子", org: "Bazaar", year: "2023", emoji: "👜", url: "https://mp.weixin.qq.com/s/AEDOdbB2HCHjRcE0gEUDaQ" },
-    { title: "Mogao Grottoes System", titleZh: "莫高窟系统", org: "Xinhua", year: "2022", emoji: "🏛️", url: "http://www.anhuinews.com/ahkj/kjsj/202210/t20221018_6458799.html" },
-    { title: "Solar Energy Mirror", titleZh: "追日镜子", org: "Xinhua", year: "2022", emoji: "☀️", url: "https://www.news.cn/science/2022-08/19/c_1310654117.htm" },
-    { title: "Graduation Poems", titleZh: "毕业古诗", org: "People's Daily", year: "2022", emoji: "🎓", url: "https://weibo.com/2803301701/LxWIfBX6y" },
-    { title: "Graduation BGMs", titleZh: "毕业BGM", org: "People's Daily", year: "2022", emoji: "🎵", url: "https://weibo.com/2803301701/LvOvmiK1s" },
-    { title: "Food Safety Beijing", titleZh: "食品安全", org: "Beijing", year: "2024", emoji: "🥛", url: "https://mp.weixin.qq.com/s/AEDOdbB2HCHjRcE0gEUDaQ" }
+    { title: "20th Shanghai Film Festival Documentary", titleZh: "第20届上海电影节幕后纪录片", desc: "Cinematography & Editing", descZh: "摄影与剪辑", org: "Bazaar Men", year: "2023", emoji: "🎬", url: "https://mp.weixin.qq.com/s/AEDOdbB2HCHjRcE0gEUDaQ" },
+    { title: "Our Days: Spring Retro Fashion Movie", titleZh: "《我们的日子》春日复古时尚大片", desc: "Cinematography & Editing", descZh: "摄影与剪辑", org: "Bazaar Men", year: "2023", emoji: "👜", url: "https://mp.weixin.qq.com/s/AEDOdbB2HCHjRcE0gEUDaQ" },
+    { title: "Mogao Grottoes Monitoring & Early Warning System", titleZh: "莫高窟文物监测预警系统", desc: "Planning, VFX & Editing", descZh: "策划、特效与剪辑", org: "Xinhua Net", year: "2022", emoji: "🏛️", url: "http://www.anhuinews.com/ahkj/kjsj/202210/t20221018_6458799.html" },
+    { title: "Super Mirror: Green Solar Energy", titleZh: "“超级镜子”追日点亮绿色能源", desc: "Planning, VFX & Editing", descZh: "策划、特效与剪辑", org: "Xinhua Net", year: "2022", emoji: "☀️", url: "https://www.news.cn/science/2022-08/19/c_1310654117.htm" },
+    { title: "Ancient Poems Blessing 2022 Graduates", titleZh: "古诗词祝福2022届毕业生", desc: "Planning, VFX & Editing", descZh: "策划、特效与剪辑", org: "People's Daily", year: "2022", emoji: "🎓", url: "https://weibo.com/2803301701/LxWIfBX6y" },
+    { title: "10 BGMs for Graduation Season", titleZh: "毕业季循环播放的10首BGM", desc: "Planning, VFX & Editing", descZh: "策划、特效与剪辑", org: "People's Daily", year: "2022", emoji: "🎵", url: "https://weibo.com/2803301701/LvOvmiK1s" },
+    { title: "Food Safety Beijing Campaign", titleZh: "食安北京专题片", desc: "Cinematography & Editing", descZh: "摄影与剪辑", org: "Beijing Market Regulation", year: "2024", emoji: "🥛", url: "https://mp.weixin.qq.com/s/AEDOdbB2HCHjRcE0gEUDaQ" }
   ];
 
   const experienceData = [
