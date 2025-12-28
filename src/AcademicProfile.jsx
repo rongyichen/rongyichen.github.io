@@ -21,18 +21,18 @@ const AcademicProfile = () => {
         name: "Rongyi Chen", title: "M.A. Student in Computational Communication",
         institution: "Center for Intelligent Media & Communication Research",
         university: "Central South University", expected: "Expected 2026", email: "rongyi@csu.edu.cn",
-        nextStep: { title: "Incoming Ph.D. Student", school: "Peking University", direction: "Big Data & AI Marketing", time: "Starting September 2026" },
+        nextStep: { title: "Incoming Ph.D. Student", school: "Peking University", field: "Communication Studies", direction: "Big Data & AI Marketing", time: "Starting September 2026" },
         bio: "I'm a researcher focusing on computational communication and communication technology studies, with particular interests in how sociotechnical systems—including generative AI, algorithms, virtual reality, and digital platforms—reshape media industries and everyday communication. I adopt a multi-method interdisciplinary approach that combines ethnographic fieldwork, experimental design, and computational analysis.",
-        researchAreas: ["Communication Technology", "Social Computing", "Human-Computer Interaction (HCI)", "Computer-Supported Cooperative Work (CSCW)"],
+        researchAreas: ["Communication Technology", "Social Computing", "Human-Computer Interaction", "Computer-Supported Cooperative Work"],
         education: [
           { school: "Central South University", period: "2023-2026", degree: "M.A. in Computational Communication" },
           { school: "Communication University of China", period: "2019-2023", degrees: ["B.A. in Communication", "B.A. in Broadcasting & Hosting Arts"], minors: ["Human-Centered Design"] },
           { school: "University of Missouri-Columbia", period: "2019-2023", degree: "International Communication Certificate" }
         ],
         training: [
-          { school: "U Chicago", program: "Data & Policy Scholar", course: "R Programming", year: "2023" },
-          { school: "UC Davis", program: "Computational Social Sci", course: "Network Analysis", year: "2024" },
-          { school: "Oxford", program: "Digital Humanities", course: "St Anne's College", year: "2024" }
+          { school: "University of Chicago", program: "Data & Policy Summer Scholar", course: "R Programming", year: "2023" },
+          { school: "University of California, Davis", program: "Computational Social Science", course: "Computer Simulations", year: "2024" },
+          { school: "University of Oxford", program: "Digital Humanities", course: "St Anne's College", year: "2024" }
         ],
         awards: [
           { icon: "🏆", title: "National Scholarship", org: "Ministry of Education, 2025" },
@@ -51,7 +51,7 @@ const AcademicProfile = () => {
       profile: {
         name: "陈荣毅", title: "计算传播方向硕士研究生",
         institution: "智媒传播研究中心", university: "中南大学", expected: "预计2026年毕业", email: "rongyi@csu.edu.cn",
-        nextStep: { title: "即将攻读博士", school: "北京大学新闻与传播学院", direction: "大数据与人工智能营销传播", time: "2026年9月入学" },
+        nextStep: { title: "即将攻读博士", school: "北京大学新闻与传播学院", field: "传播学博士", direction: "大数据与人工智能营销传播", time: "2026年9月入学" },
         bio: "我专注于计算传播学和传播技术研究，关注社会技术系统——包括生成式AI、算法、虚拟现实和数字平台——如何重塑媒体产业和日常传播。我采用跨学科方法，结合民族志田野调查、实验设计和计算分析。",
         researchAreas: ["传播技术", "社会计算", "人机交互", "计算机支持协同工作"],
         education: [
@@ -100,8 +100,8 @@ const AcademicProfile = () => {
   };
 
   const featuredResearch = [
-    { icon: "📄", year: "2025", title: "Geographic Information Displays on Social Media", titleZh: "社交媒体地理信息展示", venue: "IJHCI Q1", authors: "Yalong Xiao, Rongyi Chen, et al.", link: "https://doi.org/10.1080/10447318.2025.2524493" },
-    { icon: "🏆", year: "2025", title: "Memes & Adolescent Bullying", titleZh: "表情包与青少年欺凌", venue: "AEJMC", award: true, authors: "Rongyi Chen, et al.", link: "#" },
+    { icon: "📄", year: "2025", title: "Enhancing Trust or Fostering Misjudgment? Assessing the Impact of Emerging Geographic Information Displays on Social Media Users’ Information Trust", titleZh: "社交媒体地理信息展示", venue: "International Journal of Human–Computer Interaction (HIHC)", authors: "Yalong Xiao, Rongyi Chen, Qing Xiao, Chengzhang Zhu, Jie Feng", link: "https://doi.org/10.1080/10447318.2025.2524493" },
+    { icon: "🏆", year: "2025", title: "Artists and their poor: economic and symbolic inequality in distorted China's post-pandemic art subsidy policies", titleZh: "表情包与青少年欺凌", venue: "Cultural Trends", award: true, authors: "Jingjia Xiao, Qing Xiao, Rongyi Chen", link: "10.1080/09548963.2025.2557215" },
     { icon: "🎯", year: "2024", title: "Douyin VR Live-Streaming", titleZh: "抖音VR直播体验", venue: "ACM VRST", authors: "Rongyi Chen, et al.", link: "https://doi.org/10.1145/3641825.3689519" },
     { icon: "📚", year: "2025", title: "Religious Videos on YouTube", titleZh: "YouTube宗教视频", venue: "arXiv", authors: "Rongyi Chen, et al.", link: "https://arxiv.org/abs/2505.20623" },
     { icon: "🌐", year: "2025", title: "LLMs in Health Communication", titleZh: "健康传播中的LLM", venue: "ICA", authors: "Rongyi Chen, et al.", link: "#" }
@@ -193,8 +193,9 @@ const AcademicProfile = () => {
             </div>
             <div className="my-6 p-4 bg-gradient-to-r from-red-50 to-orange-50 rounded-xl border border-red-100">
               <div className="flex items-center gap-2 mb-1"><GraduationCap size={16} className="text-red-600" /><span className="font-bold text-red-700 text-base">{t.profile.nextStep.title}</span></div>
-              <p className="text-base font-medium text-gray-800">{t.profile.nextStep.school}</p>
-              <p className="text-sm text-red-600">{t.profile.nextStep.direction}</p>
+              <p className="text-sm font-medium text-gray-800">{t.profile.nextStep.school}</p>
+              <p className="text-xs text-gray-700">{t.profile.nextStep.field}</p>
+              <p className="text-xs text-red-600">{t.profile.nextStep.direction}</p>
               <p className="text-sm text-gray-500">{t.profile.nextStep.time}</p>
             </div>
             <div className="flex flex-wrap gap-1.5 mb-4">{t.profile.researchAreas.map((area, i) => <span key={i} className="px-2 py-1 bg-gradient-to-r from-purple-100 to-violet-100 text-purple-700 rounded-full text-sm">{area}</span>)}</div>
