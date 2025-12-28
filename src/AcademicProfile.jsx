@@ -60,8 +60,8 @@ const AcademicProfile = () => {
           { school: "密苏里大学", period: "2019-2023", degree: "国际传播证书" }
         ],
         training: [
-          { school: "芝加哥大学", program: "数据与政策学者", year: "2023" },
-          { school: "UC Davis", program: "计算社会科学", year: "2024" },
+          { school: "芝加哥大学", program: "数据与政策暑期学者", year: "2023" },
+          { school: "加州大学戴维斯分校", program: "计算社会科学", year: "2024" },
           { school: "牛津大学", program: "数字人文", year: "2024" }
         ],
         awards: [
@@ -239,7 +239,7 @@ const AcademicProfile = () => {
                 </div>
                 <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-lg p-5 border border-white/50">
                   <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2"><Star size={16} className="text-purple-600" />{t.sections.featuredResearch}</h3>
-                  <div className="space-y-2">{featuredResearch.map((item, i) => <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="block group"><div className={`p-2.5 rounded-lg border transition-all hover:shadow-md ${i === 0 ? 'bg-gradient-to-r from-purple-50 to-violet-50 border-purple-200' : 'bg-gray-50/50 border-gray-100 hover:bg-purple-50/50'}`}><div className="flex items-start gap-2"><span className="text-lg">{item.icon}</span><div className="flex-1 min-w-0"><div className="flex items-center gap-1.5 mb-0.5"><span className="text-sm font-medium text-white bg-purple-500 px-1.5 py-0.5 rounded">{item.year}</span><span className="text-sm text-purple-600">{item.venue}</span>{item.award && <span className="text-sm">🏆</span>}</div><h4 className="text-sm font-medium text-gray-800 line-clamp-2">{language === 'en' ? item.title : item.titleZh}</h4><p className="text-sm text-gray-500 truncate mt-0.5">{highlightAuthor(item.authors, 'Rongyi Chen')}</p></div><ExternalLink size={12} className="text-gray-400 group-hover:text-purple-500 flex-shrink-0" /></div></div></a>)}</div>
+                  <div className="space-y-3">{featuredResearch.map((item, i) => <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="block group"><div className={`p-4 rounded-xl border transition-all hover:shadow-md ${i === 0 ? 'bg-gradient-to-r from-purple-50 to-violet-50 border-purple-200' : 'bg-gray-50/50 border-gray-100 hover:bg-purple-50/50'}`}><div className="flex items-start justify-between gap-3"><div className="flex-1"><div className="flex items-center gap-2 mb-2"><span className="text-sm font-medium text-white bg-purple-500 px-2 py-0.5 rounded">{item.year}</span><span className="text-sm text-purple-600 font-medium">{item.venue}</span>{item.award && <span className="text-sm">🏆</span>}</div><h4 className="text-base font-semibold text-gray-800 leading-snug mb-2">{language === 'en' ? item.title : item.titleZh}</h4><p className="text-sm text-gray-500 leading-relaxed">{highlightAuthor(item.authors, 'Rongyi Chen')}</p></div><ExternalLink size={14} className="text-gray-400 group-hover:text-purple-500 flex-shrink-0 mt-1" /></div></div></a>)}</div>
                 </div>
               </div>
             </motion.div>
