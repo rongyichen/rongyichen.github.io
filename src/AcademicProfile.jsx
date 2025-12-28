@@ -87,8 +87,8 @@ const AcademicProfile = () => {
   const newsData = {
     academic: [
       { date: "2025-12-24", title: "🎓 Admitted to Peking University Ph.D. Program!", titleZh: "🎓 北京大学博士预录取！", content: "I have been pre-admitted to the Ph.D. program in Communication Studies at the School of Journalism and Communication, Peking University, with a research focus on Big Data & AI Marketing Communication. Starting September 2026.", contentZh: "我已被北京大学新闻与传播学院传播学博士项目预录取，研究方向为大数据与人工智能营销传播，将于2026年9月入学。" },
-      { date: "2025-09-10", title: "📄 Paper Published in Cultural Trends!", titleZh: "📄 论文发表于Cultural Trends！", content: "Our paper 'Artists and their poor: economic and symbolic inequality in distorted China's post-pandemic art subsidy policies' has been published in Cultural Trends (SSCI).", contentZh: "论文《艺术家及其贫困：中国后疫情时代艺术补贴政策中的经济与符号不平等》发表于Cultural Trends (SSCI)。" },
-      { date: "2025-06-20", title: "🎉 SSCI Q1 Paper Accepted!", titleZh: "🎉 SSCI Q1论文录用！", content: "My co-authored paper 'Enhancing Trust or Fostering Misjudgment? Assessing the Impact of Emerging Geographic Information Displays on Social Media Users' Information Trust' has been accepted by the International Journal of Human–Computer Interaction (IJHCI), a prestigious SSCI Q1 journal.", contentZh: "合作论文《增强信任还是助长误判？社交媒体地理信息展示对用户信息信任的影响》被SSCI Q1期刊《国际人机交互期刊》(IJHCI)录用。" },
+      { date: "2025-09-10", title: "📄 Paper Published in Cultural Trends!", titleZh: "📄 论文发表于Cultural Trends！", content: "Our paper “Artists and their poor: economic and symbolic inequality in distorted China's post-pandemic art subsidy policies” has been published in Cultural Trends (SSCI Q1).", contentZh: "论文《艺术家及其贫困：中国后疫情时代艺术补贴政策中的经济与符号不平等》发表于Cultural Trends (SSCI)。" },
+      { date: "2025-06-20", title: "🎉 SSCI Q1 Paper Accepted!", titleZh: "🎉 SSCI Q1论文录用！", content: "My co-authored paper “Enhancing Trust or Fostering Misjudgment? Assessing the Impact of Emerging Geographic Information Displays on Social Media Users' Information Trust” has been accepted by the International Journal of Human–Computer Interaction (IJHCI), a prestigious SCI/SSCI Q1 journal.", contentZh: "合作论文《增强信任还是助长误判？社交媒体地理信息展示对用户信息信任的影响》被SSCI Q1期刊《国际人机交互期刊》(IJHCI)录用。" },
       { date: "2025-05-20", title: "🏆 AEJMC Second Place Paper Award!", titleZh: "🏆 AEJMC论文二等奖！", content: "My co-authored paper has been accepted to the Mass Communication and Society Division at the 2025 AEJMC 108th Annual Conference (as first author), winning the Second Place Faculty Paper Award.", contentZh: "作为第一作者的合作论文被第108届AEJMC年会大众传播与社会分会录用，并获得论文二等奖。" },
       { date: "2025-03-13", title: "📧 4 Conference Papers Accepted!", titleZh: "📧 4篇会议论文录用！", content: "Four co-authored papers accepted to ICA Annual Conference (2 papers as first author), ICA Pre-Conference, and IAMCR Annual Conference.", contentZh: "四篇合作论文分别被ICA年会（2篇为第一作者）、ICA前会和IAMCR年会录用。" }
     ],
@@ -251,7 +251,7 @@ const AcademicProfile = () => {
             {activeTab === 'news' && (
               <motion.div key="news" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                  <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-lg p-5 border border-white/50 h-[550px] flex flex-col">
+                  <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-lg p-5 border border-white/50 h-[620px] flex flex-col">
                     <h3 className="text-lg font-bold text-gray-800 mb-3 flex items-center gap-2"><Calendar size={16} className="text-purple-600" />{t.sections.academicNews}</h3>
                     <div className="flex-1 overflow-y-auto pr-2 custom-scrollbar">
                       <div className="relative"><div className="absolute left-2.5 top-0 bottom-0 w-0.5 bg-purple-200"></div>
@@ -260,7 +260,7 @@ const AcademicProfile = () => {
                     </div>
                   </div>
                   <div className="space-y-4">
-                    <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-lg p-5 border border-white/50 h-[260px] flex flex-col">
+                    <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-lg p-5 border border-white/50 h-[300px] flex flex-col">
                       <h3 className="text-lg font-bold text-gray-800 mb-3 flex items-center gap-2"><Briefcase size={16} className="text-violet-600" />{t.sections.industryNews}</h3>
                       <div className="flex-1 overflow-y-auto pr-2 custom-scrollbar">
                         <div className="relative"><div className="absolute left-2.5 top-0 bottom-0 w-0.5 bg-violet-200"></div>
@@ -268,7 +268,7 @@ const AcademicProfile = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-lg p-5 border border-white/50 h-[260px] flex flex-col">
+                    <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-lg p-5 border border-white/50 h-[300px] flex flex-col">
                       <h3 className="text-lg font-bold text-gray-800 mb-3 flex items-center gap-2">🏆 {t.sections.awards}</h3>
                       <div className="flex-1 overflow-y-auto pr-2 custom-scrollbar">
                         <div className="space-y-2">{t.profile.awards.map((aw, i) => <div key={i} className="flex items-start gap-2 p-2 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg border border-yellow-100"><span className="text-lg">{aw.icon}</span><div><p className="font-medium text-gray-800 text-base">{aw.title}</p><p className="text-sm text-gray-600">{aw.org}</p></div></div>)}</div>
