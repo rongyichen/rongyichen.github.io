@@ -207,7 +207,7 @@ const AcademicProfile = () => {
           </motion.div>
         </aside>
 
-        <main className="flex-1 p-8 lg:p-12 ml-80 lg:ml-96">
+        <main className="flex-1 p-6 lg:p-8 ml-80 lg:ml-96">
           <motion.nav initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="bg-white/80 backdrop-blur-md rounded-2xl shadow-lg p-3 mb-10 sticky top-6 z-40 border border-white/50">
             <div className="flex flex-wrap gap-2">
               {Object.entries(t.tabs).map(([key, label]) => (
@@ -219,27 +219,27 @@ const AcademicProfile = () => {
           </motion.nav>
 
           <AnimatePresence mode="wait">
-            {activeTab === 'about' && (
-              <motion.div key="about" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-6">
-                <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-lg p-6 border border-white/50"><p className="text-gray-700 leading-relaxed text-base">{t.profile.bio}</p></div>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                  <div className="space-y-6">
-                    <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-lg p-5 border border-white/50">
-                      <h3 className="text-l g font-bold text-gray-800 mb-4 flex items-center gap-2"><span className="w-7 h-7 bg-purple-100 rounded-lg flex items-center justify-center"><Award size={14} className="text-purple-600" /></span>{t.sections.education}</h3>
-                      <div className="space-y-3">{t.profile.education.map((edu, i) => <div key={i} className="border-l-2 border-purple-300 pl-3"><p className="font-semibold text-gray-800 text-base">{edu.school}</p><p className="text-sm text-purple-600">{edu.period}</p>{edu.degree && <p className="text-sm text-gray-600">{edu.degree}</p>}{edu.degrees && edu.degrees.map((d, j) => <p key={j} className="text-sm text-gray-600">{d}</p>)}{edu.minors && <p className="text-sm text-gray-500">Minors: {edu.minors.join(', ')}</p>}</div>)}</div>
-                    </div>
-                    <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-lg p-5 border border-white/50">
-                      <h3 className="text-lg font-bold text-gray-800 mb-4">{t.sections.training}</h3>
-                      <div className="grid grid-cols-3 gap-2">{t.profile.training.map((tr, i) => <div key={i} className="bg-gradient-to-br from-violet-50 to-purple-100 rounded-lg p-3 flex flex-col border border-purple-100"><div className="text-2xl mb-2">{tr.emoji}</div><div><p className="font-bold text-gray-800 text-sm">{tr.school}</p><p className="text-sm text-purple-600">{tr.program}</p></div><div className="mt-2"><p className="text-sm text-gray-500">{tr.course}</p><p className="text-sm text-gray-400">{tr.year}</p></div></div>)}</div>
-                    </div>
+          {activeTab === 'about' && (
+            <motion.div key="about" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div className="space-y-6">
+                  <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-lg p-6 border border-white/50"><p className="text-gray-700 leading-relaxed text-base">{t.profile.bio}</p></div>
+                  <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-lg p-5 border border-white/50">
+                    <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2"><span className="w-7 h-7 bg-purple-100 rounded-lg flex items-center justify-center"><Award size={14} className="text-purple-600" /></span>{t.sections.education}</h3>
+                    <div className="space-y-3">{t.profile.education.map((edu, i) => <div key={i} className="border-l-2 border-purple-300 pl-3"><p className="font-semibold text-gray-800 text-base">{edu.school}</p><p className="text-sm text-purple-600">{edu.period}</p>{edu.degree && <p className="text-sm text-gray-600">{edu.degree}</p>}{edu.degrees && edu.degrees.map((d, j) => <p key={j} className="text-sm text-gray-600">{d}</p>)}{edu.minors && <p className="text-sm text-gray-500">Minors: {edu.minors.join(', ')}</p>}</div>)}</div>
                   </div>
                   <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-lg p-5 border border-white/50">
-                    <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2"><Star size={16} className="text-purple-600" />{t.sections.featuredResearch}</h3>
-                    <div className="space-y-2">{featuredResearch.map((item, i) => <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="block group"><div className={`p-2.5 rounded-lg border transition-all hover:shadow-md ${i === 0 ? 'bg-gradient-to-r from-purple-50 to-violet-50 border-purple-200' : 'bg-gray-50/50 border-gray-100 hover:bg-purple-50/50'}`}><div className="flex items-start gap-2"><span className="text-lg">{item.icon}</span><div className="flex-1 min-w-0"><div className="flex items-center gap-1.5 mb-0.5"><span className="text-sm font-medium text-white bg-purple-500 px-1.5 py-0.5 rounded">{item.year}</span><span className="text-sm text-purple-600">{item.venue}</span>{item.award && <span className="text-sm">🏆</span>}</div><h4 className="text-sm font-medium text-gray-800 line-clamp-2">{language === 'en' ? item.title : item.titleZh}</h4><p className="text-sm text-gray-500 truncate mt-0.5">{highlightAuthor(item.authors, 'Rongyi Chen')}</p></div><ExternalLink size={12} className="text-gray-400 group-hover:text-purple-500 flex-shrink-0" /></div></div></a>)}</div>
+                    <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2"><span className="w-7 h-7 bg-purple-100 rounded-lg flex items-center justify-center"><BookOpen size={14} className="text-purple-600" /></span>{t.sections.training}</h3>
+                    <div className="grid grid-cols-3 gap-2">{t.profile.training.map((tr, i) => <div key={i} className="bg-gradient-to-br from-violet-50 to-purple-100 rounded-lg p-3 flex flex-col border border-purple-100"><div className="text-2xl mb-2">{tr.emoji}</div><div><p className="font-bold text-gray-800 text-sm">{tr.school}</p><p className="text-sm text-purple-600">{tr.program}</p></div><div className="mt-2"><p className="text-sm text-gray-500">{tr.course}</p><p className="text-sm text-gray-400">{tr.year}</p></div></div>)}</div>
                   </div>
                 </div>
-              </motion.div>
-            )}
+                <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-lg p-5 border border-white/50">
+                  <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2"><Star size={16} className="text-purple-600" />{t.sections.featuredResearch}</h3>
+                  <div className="space-y-2">{featuredResearch.map((item, i) => <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="block group"><div className={`p-2.5 rounded-lg border transition-all hover:shadow-md ${i === 0 ? 'bg-gradient-to-r from-purple-50 to-violet-50 border-purple-200' : 'bg-gray-50/50 border-gray-100 hover:bg-purple-50/50'}`}><div className="flex items-start gap-2"><span className="text-lg">{item.icon}</span><div className="flex-1 min-w-0"><div className="flex items-center gap-1.5 mb-0.5"><span className="text-sm font-medium text-white bg-purple-500 px-1.5 py-0.5 rounded">{item.year}</span><span className="text-sm text-purple-600">{item.venue}</span>{item.award && <span className="text-sm">🏆</span>}</div><h4 className="text-sm font-medium text-gray-800 line-clamp-2">{language === 'en' ? item.title : item.titleZh}</h4><p className="text-sm text-gray-500 truncate mt-0.5">{highlightAuthor(item.authors, 'Rongyi Chen')}</p></div><ExternalLink size={12} className="text-gray-400 group-hover:text-purple-500 flex-shrink-0" /></div></div></a>)}</div>
+                </div>
+              </div>
+            </motion.div>
+          )}
 
             {activeTab === 'news' && (
               <motion.div key="news" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
