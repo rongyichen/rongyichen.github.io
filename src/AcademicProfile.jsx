@@ -30,9 +30,9 @@ const AcademicProfile = () => {
           { school: "University of Missouri-Columbia", period: "2019-2023", degree: "International Communication Certificate" }
         ],
         training: [
-          { school: "University of Chicago", program: "Data & Policy Summer Scholar", course: "R Programming", year: "2023" },
-          { school: "University of California, Davis", program: "Computational Social Science", course: "Computer Simulations", year: "2024" },
-          { school: "University of Oxford", program: "Digital Humanities", course: "St Anne's College", year: "2024" }
+          { school: "University of Chicago", program: "Data & Policy Summer Scholar", year: "2023" },
+          { school: "University of California, Davis", program: "Computational Social Science", year: "2024" },
+          { school: "University of Oxford", program: "Digital Humanities", year: "2024" }
         ],
         awards: [
           { icon: "🏆", title: "National Scholarship", org: "Ministry of Education, 2025" },
@@ -60,9 +60,9 @@ const AcademicProfile = () => {
           { school: "密苏里大学", period: "2019-2023", degree: "国际传播证书" }
         ],
         training: [
-          { school: "芝加哥大学", program: "数据与政策学者", course: "R语言", year: "2023" },
-          { school: "UC Davis", program: "计算社会科学", course: "网络分析", year: "2024" },
-          { school: "牛津大学", program: "数字人文", course: "圣安妮学院", year: "2024" }
+          { school: "芝加哥大学", program: "数据与政策学者", year: "2023" },
+          { school: "UC Davis", program: "计算社会科学", year: "2024" },
+          { school: "牛津大学", program: "数字人文", year: "2024" }
         ],
         awards: [
           { icon: "🏆", title: "国家奖学金", org: "教育部, 2025" },
@@ -234,10 +234,7 @@ const AcademicProfile = () => {
                   <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-lg p-5 border border-white/50">
                     <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2"><span className="w-7 h-7 bg-purple-100 rounded-lg flex items-center justify-center"><Award size={14} className="text-purple-600" /></span>{t.sections.education}</h3>
                     <div className="space-y-3">{t.profile.education.map((edu, i) => <div key={i} className="border-l-2 border-purple-300 pl-3"><p className="font-semibold text-gray-800 text-base">{edu.school}</p><p className="text-sm text-purple-600">{edu.period}</p>{edu.degree && <p className="text-sm text-gray-600">{edu.degree}</p>}{edu.degrees && edu.degrees.map((d, j) => <p key={j} className="text-sm text-gray-600">{d}</p>)}{edu.minors && <p className="text-sm text-gray-500">Minors: {edu.minors.join(', ')}</p>}</div>)}</div>
-                  </div>
-                  <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-lg p-5 border border-white/50">
-                    <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2"><span className="w-7 h-7 bg-purple-100 rounded-lg flex items-center justify-center"><BookOpen size={14} className="text-purple-600" /></span>{t.sections.training}</h3>
-                    <div className="grid grid-cols-3 gap-2">{t.profile.training.map((tr, i) => <div key={i} className="bg-gradient-to-br from-violet-50 to-purple-100 rounded-lg p-3 flex flex-col border border-purple-100"><div className="text-2xl mb-2">{tr.emoji}</div><div><p className="font-bold text-gray-800 text-sm">{tr.school}</p><p className="text-sm text-purple-600">{tr.program}</p></div><div className="mt-2"><p className="text-sm text-gray-500">{tr.course}</p><p className="text-sm text-gray-400">{tr.year}</p></div></div>)}</div>
+                    <div className="grid grid-cols-3 gap-2 mt-4 pt-4 border-t border-purple-100">{t.profile.training.map((tr, i) => <div key={i} className="bg-gradient-to-br from-violet-50 to-purple-100 rounded-lg p-3 flex flex-col border border-purple-100"><p className="font-bold text-gray-800 text-sm">{tr.school}</p><p className="text-sm text-purple-600">{tr.program}</p><p className="text-sm text-gray-400 mt-1">{tr.year}</p></div>)}</div>
                   </div>
                 </div>
                 <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-lg p-5 border border-white/50">
