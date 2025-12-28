@@ -137,16 +137,18 @@ const AcademicProfile = () => {
 
   const projectsData = {
     grants: [
-      { year: "2025", title: "AI News Production Research", titleZh: "AI新闻生产研究", role: "Co-PI", program: "Hunan Broadcasting", programZh: "湖南广电", amount: "¥100K" },
-      { year: "2023-24", title: "Crisis Communication Research", titleZh: "危机传播研究", role: "Co-PI", program: "Hunan Daily", programZh: "湖南日报", amount: "¥30K" }
+      { year: "2025", title: "Research on AI-driven Transformation of News Production and Dissemination Models", titleZh: "人工智能驱动新闻生产与传播模式转型研究", role: "Co-PI", program: "Hunan Broadcasting System Research Fellowship", programZh: "湖南广播电视台研究资助项目", amount: "CN¥100,000" },
+      { year: "2023-2024", title: "Social Media Crisis Communication amid Disasters and Emergencies", titleZh: "灾害与突发事件中的社交媒体危机传播", role: "Co-PI", program: "Hunan Daily Research Fellowship", programZh: "湖南日报研究资助项目", amount: "CN¥30,000" }
     ],
     projects: [
-      { title: "International Public Opinion Warning", titleZh: "国际舆情预警", meta: "2024-25, CSU", metaZh: "2024-25, 中南大学", role: "RA", funding: "24B0023" },
-      { title: "Multimodal AI Communication", titleZh: "多模态AI传播", meta: "2024-25, CSU", metaZh: "2024-25, 中南大学", role: "RA", funding: "2024JK2023" },
-      { title: "Major Emergency Public Opinion", titleZh: "突发事件舆情", meta: "2024-25, CSU", metaZh: "2024-25, 中南大学", role: "RA", funding: "22YJC860007" },
-      { title: "Live Stream Host Standards", titleZh: "主播行业标准", meta: "2021, CUC", metaZh: "2021, 中传", role: "RA", funding: "HW21144" },
-      { title: "Chinese Ethnicities in Social Media", titleZh: "社交媒体民族形象", meta: "2022-23, CUC", metaZh: "2022-23, 中传", role: "RA", funding: "2021-GMC-052" },
-      { title: "Adolescents' Digital Literacy", titleZh: "青少年数字素养", meta: "2020-21, CUC", metaZh: "2020-21, 中传", role: "RA", funding: "19BXW087" }
+      { title: "Intelligent Early Warning of International Public Opinion Based on Multimodal Data Fusion", titleZh: "基于多模态数据融合的国际舆情智能预警", meta: "2024-2025, Central South University", metaZh: "2024-2025, 中南大学计算机学院", role: "RA", funding: "Hunan Education Dept: 24B0023" },
+      { title: "Key Multimodal AI Technologies for Precision International Communication", titleZh: "面向精准国际传播的多模态AI关键技术研究与示范", meta: "2024-2025, Central South University", metaZh: "2024-2025, 中南大学计算机学院", role: "RA", funding: "Hunan Key R&D: 2024JK2023" },
+      { title: "International Public Opinion Dynamics in Major Emergencies on Social Media", titleZh: "社交媒体重大突发事件国际舆情动态研究", meta: "2024-2025, Central South University", metaZh: "2024-2025, 中南大学人文学院", role: "RA", funding: "MOE Youth Fund: 22YJC860007" },
+      { title: "Live Stream Host Professional Ethics and Industry Standards Development", titleZh: "直播主播职业道德提升与行业标准制定", meta: "2021, Communication University of China", metaZh: "2021, 中国传媒大学传播研究院", role: "RA", funding: "National Standard: HW21144" },
+      { title: "Representation of Chinese Ethnicities in Global Social Media", titleZh: "全球社交媒体中中国各民族形象及相关话语研究", meta: "2022-2023, Communication University of China", metaZh: "2022-2023, 中国传媒大学传播研究院", role: "RA", funding: "Ethnic Affairs Commission: 2021-GMC-052" },
+      { title: "Adolescents' Digital Literacy in Media Convergence Environment", titleZh: "媒介融合环境下青少年数字素养与价值取向培育", meta: "2020-2021, Communication University of China", metaZh: "2020-2021, 中国传媒大学传播研究院", role: "RA", funding: "NSF China: 19BXW087" },
+      { title: "Enterprise Survey for Innovation and Entrepreneurship in China (ESIEC)", titleZh: "中国企业创新创业调查(ESIEC)", meta: "2023, Peking University", metaZh: "2023, 北京大学企业大数据研究中心", role: "RA", funding: "" },
+      { title: "Mianzhu Children's Cognitive and Non-cognitive Abilities Development Tracking", titleZh: "绵竹儿童认知与非认知能力发展追踪项目", meta: "2020, Jinan University", metaZh: "2020, 暨南大学调查数据中心", role: "RA", funding: "" }
     ]
   };
 
@@ -161,14 +163,14 @@ const AcademicProfile = () => {
   ];
 
   const experienceData = [
-    { period: "2025-", title: "AI Product Manager", titleZh: "AI产品经理", org: "Mango TV", orgZh: "芒果TV", desc: "Singer 2025, Ride the Wind AI systems.", descZh: "歌手2025、乘风破浪AI系统。", logo: "/images/logos/mangotv.png" },
-    { period: "2023-25", title: "Content Editor", titleZh: "内容编辑", org: "UChicago Harris", orgZh: "芝加哥大学", desc: "China enrollment & video.", descZh: "中国区招生与视频。", logo: "/images/logos/uchicago.png" },
-    { period: "2023", title: "Cinematographer", titleZh: "摄影师", org: "BAZAAR Men", orgZh: "芭莎男士", desc: "Celebrity interviews.", descZh: "明星访谈。", logo: "/images/logos/bazaar.png" },
-    { period: "2022-23", title: "Assistant Director", titleZh: "助理导演", org: "CCTV-6", orgZh: "电影频道", desc: "Golden Rooster Awards.", descZh: "金鸡奖颁奖典礼。", logo: "/images/logos/cctv6.png" },
-    { period: "2022", title: "Content Editor", titleZh: "内容编辑", org: "People's Daily", orgZh: "人民日报", desc: "Viral Weibo content.", descZh: "微博爆款内容。", logo: "/images/logos/peopledaily.png" },
-    { period: "2021", title: "Tech Specialist", titleZh: "技术专员", org: "Alibaba/Youku", orgZh: "阿里/优酷", desc: "Digital humans.", descZh: "数字人测试。", logo: "/images/logos/alibaba.png" },
-    { period: "2021", title: "Marketing", titleZh: "市场营销", org: "Ximalaya", orgZh: "喜马拉雅", desc: "Campus program.", descZh: "校园计划。", logo: "/images/logos/ximalaya.png" },
-    { period: "2020-21", title: "Journalist", titleZh: "记者", org: "Zhanjiang TV", orgZh: "湛江广电", desc: "News & documentary.", descZh: "新闻与纪录片。", logo: "/images/logos/zhanjiang.png" }
+    { period: "2025", title: "AI Product Manager Intern", titleZh: "AI产品经理实习生", org: "Mango TV, Intelligent Research Center", orgZh: "芒果TV 智能研究中心", desc: "Led AI entertainment systems for 'Singer 2025' and 'Ride the Wind 2025', including facial expression analysis and celebrity personality simulation.", descZh: "主导《歌手2025》《乘风破浪2025》等综艺AI系统，包括面部表情分析和明星人格模拟。", logo: "/images/logos/mangotv.png" },
+    { period: "2023 - 2025", title: "Multimedia Content Editor Intern", titleZh: "多媒体内容编辑实习生", org: "University of Chicago, Harris School", orgZh: "芝加哥大学哈里斯公共政策学院", desc: "China region enrollment, video production, and Chinese social media operations for academic programs.", descZh: "负责中国区招生、视频制作及学术项目的中文社交媒体运营。", logo: "/images/logos/uchicago.png" },
+    { period: "2023", title: "Cinematography Intern", titleZh: "摄影实习生", org: "BAZAAR Men", orgZh: "芭莎男士", desc: "Video production for celebrity interviews and CCTV-6 film promotion projects.", descZh: "明星访谈视频制作及CCTV-6电影宣传项目。", logo: "/images/logos/bazaar.png" },
+    { period: "2022 - 2023", title: "Assistant Director Intern", titleZh: "助理导演实习生", org: "CCTV-6, 1905 Movie Network", orgZh: "电影频道(CCTV-6) 1905电影网", desc: "Executive director for the 35th Golden Rooster Awards and '5G+360°' immersive live broadcast.", descZh: "第35届金鸡奖颁奖典礼执行导演及5G+360°沉浸式直播。", logo: "/images/logos/cctv6.png" },
+    { period: "2022", title: "Multimedia Content Editor Intern", titleZh: "多媒体内容编辑实习生", org: "People's Daily, Weibo Department", orgZh: "人民日报微博部", desc: "Produced viral content reaching #2 and #3 on Weibo hot search with millions of views.", descZh: "制作微博热搜第2、3名爆款内容，获数百万播放量。", logo: "/images/logos/peopledaily.png" },
+    { period: "2021", title: "Live-streaming Tech Specialist Intern", titleZh: "直播技术专员实习生", org: "Alibaba Entertainment, Youku/Laifeng", orgZh: "阿里大文娱 优酷/来疯", desc: "Testing digital humans and interactive gaming features for live streaming products.", descZh: "测试数字人及直播互动游戏功能。", logo: "/images/logos/alibaba.png" },
+    { period: "2021", title: "Marketing Intern", titleZh: "市场营销实习生", org: "Ximalaya Technology", orgZh: "喜马拉雅科技", desc: "Established Campus Partner Program with partnerships across 200+ universities.", descZh: "建立校园合伙人计划，与200+高校建立合作。", logo: "/images/logos/ximalaya.png" },
+    { period: "2020 - 2021", title: "Journalist Intern", titleZh: "记者实习生", org: "Zhanjiang Radio and Television", orgZh: "湛江广播电视台", desc: "Produced news segments and documentary content for local television broadcasts.", descZh: "制作本地电视新闻片段和纪录片内容。", logo: "/images/logos/zhanjiang.png" }
   ];
 
   return (
