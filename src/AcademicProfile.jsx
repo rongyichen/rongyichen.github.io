@@ -15,7 +15,7 @@ const AcademicProfile = () => {
 
   const content = {
     en: {
-      tabs: { about: 'About', news: 'News', research: 'Research', projects: 'Projects', portfolio: 'Portfolio', experience: 'Experience' },
+      tabs: { about: 'About', news: 'News', research: 'Research', projects: 'Projects', portfolio: 'Portfolio', experience: 'Internship' },
       tabIcons: { about: '👤', news: '📰', research: '📚', projects: '💼', portfolio: '🎬', experience: '🏢' },
       profile: {
         name: "Rongyi Chen", title: "M.A. Student in Computational Communication",
@@ -312,7 +312,24 @@ const AcademicProfile = () => {
 
             {activeTab === 'experience' && (
               <motion.div key="experience" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
-                <div className="space-y-4">{experienceData.map((e, i) => <motion.div key={i} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }} className="bg-white/80 backdrop-blur-md rounded-xl p-4 border border-white/50 shadow flex gap-4"><div className="flex-1"><span className="text-sm text-purple-600 bg-purple-100 px-1.5 py-0.5 rounded">{e.period}</span><h4 className="font-bold text-gray-800 mt-1.5 text-base">{language === 'en' ? e.title : e.titleZh}</h4><p className="text-sm text-purple-600 mt-0.5">{language === 'en' ? e.org : e.orgZh}</p><p className="text-sm text-gray-600 mt-1.5">{language === 'en' ? e.desc : e.descZh}</p></div><div className="flex-shrink-0 w-14 h-14 bg-gray-50 rounded-lg flex items-center justify-center border border-gray-100"><img src={e.logo} alt="logo" className="w-10 h-10 object-contain" onError={(ev) => { ev.target.style.display = 'none'; ev.target.nextSibling.style.display = 'flex'; }} /><div className="w-10 h-10 bg-gradient-to-br from-purple-100 to-violet-100 rounded items-center justify-center hidden"><Briefcase size={16} className="text-purple-400" /></div></div></motion.div>)}</div>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                  {experienceData.map((e, i) => (
+                    <motion.div key={i} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.03 }} className="bg-white/80 backdrop-blur-md rounded-xl p-4 border border-white/50 shadow">
+                      <div className="flex items-start justify-between gap-3">
+                        <div className="flex-1">
+                          <span className="text-sm text-white bg-purple-500 px-2 py-0.5 rounded mb-2 inline-block">{e.period}</span>
+                          <h4 className="font-bold text-gray-800 text-base">{language === 'en' ? e.title : e.titleZh}</h4>
+                          <p className="text-sm text-purple-600 mt-1">{language === 'en' ? e.org : e.orgZh}</p>
+                          <p className="text-sm text-gray-600 mt-2">{language === 'en' ? e.desc : e.descZh}</p>
+                        </div>
+                        <div className="flex-shrink-0 w-12 h-12 bg-gray-50 rounded-lg flex items-center justify-center border border-gray-100">
+                          <img src={e.logo} alt="logo" className="w-9 h-9 object-contain" onError={(ev) => { ev.target.style.display = 'none'; ev.target.nextSibling.style.display = 'flex'; }} />
+                          <div className="w-9 h-9 bg-gradient-to-br from-purple-100 to-violet-100 rounded items-center justify-center hidden"><Briefcase size={14} className="text-purple-400" /></div>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
               </motion.div>
             )}
           </AnimatePresence>
