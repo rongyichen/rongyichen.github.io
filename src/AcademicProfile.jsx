@@ -43,7 +43,7 @@ const AcademicProfile = () => {
           { icon: "🎖️", title: "Best Filming Award", org: "Hebei TV, 2022" }
         ]
       },
-      sections: { education: "Education", training: "Extra Training", awards: "Awards", featuredResearch: "Featured Research", academicNews: "Academic News", industryNews: "Industry News", preprints: "Preprints", publications: "Publications", conferences: "Conferences", grants: "Grants", researchProjects: "Projects", videoProductions: "Videos", watchVideo: "Watch", lastUpdated: "Created by Rongyi | Dec 2025" }
+      sections: { education: "Education", training: "Extra Training", awards: "Awards", featuredResearch: "Selected Publications", academicNews: "Academic News", industryNews: "Industry News", preprints: "Preprints", publications: "Publications", conferences: "Conferences", grants: "Grants", researchProjects: "Projects", videoProductions: "Videos", watchVideo: "Watch", lastUpdated: "Created by Rongyi | Dec 2025" }
     },
     zh: {
       tabs: { about: '关于', news: '动态', research: '研究', projects: '项目', portfolio: '作品', experience: '经历' },
@@ -101,10 +101,10 @@ const AcademicProfile = () => {
 
   const featuredResearch = [
     { icon: "📄", year: "2025", title: "Enhancing Trust or Fostering Misjudgment? Assessing the Impact of Emerging Geographic Information Displays on Social Media Users’ Information Trust", titleZh: "社交媒体地理信息展示", venue: "International Journal of Human–Computer Interaction (HIHC)", authors: "Yalong Xiao, Rongyi Chen, Qing Xiao, Chengzhang Zhu, Jie Feng", link: "https://doi.org/10.1080/10447318.2025.2524493" },
-    { icon: "🏆", year: "2025", title: "Artists and their poor: economic and symbolic inequality in distorted China's post-pandemic art subsidy policies", titleZh: "表情包与青少年欺凌", venue: "Cultural Trends", award: true, authors: "Jingjia Xiao, Qing Xiao, Rongyi Chen", link: "10.1080/09548963.2025.2557215" },
-    { icon: "🎯", year: "2024", title: "Douyin VR Live-Streaming", titleZh: "抖音VR直播体验", venue: "ACM VRST", authors: "Rongyi Chen, et al.", link: "https://doi.org/10.1145/3641825.3689519" },
-    { icon: "📚", year: "2025", title: "Religious Videos on YouTube", titleZh: "YouTube宗教视频", venue: "arXiv", authors: "Rongyi Chen, et al.", link: "https://arxiv.org/abs/2505.20623" },
-    { icon: "🌐", year: "2025", title: "LLMs in Health Communication", titleZh: "健康传播中的LLM", venue: "ICA", authors: "Rongyi Chen, et al.", link: "#" }
+    { icon: "📄", year: "2025", title: "Artists and their poor: economic and symbolic inequality in distorted China's post-pandemic art subsidy policies", titleZh: "表情包与青少年欺凌", venue: "Cultural Trends", award: true, authors: "Jingjia Xiao, Qing Xiao, Rongyi Chen", link: "https://doi.org/10.1080/09548963.2025.2557215" },
+    { icon: "🎯", year: "2024", title: "Institutionalizing Folk Theories of Algorithms: How Multi-Channel Networks (MCNs) Govern Algorithmic Labor in Chinese Live-Streaming Industry", titleZh: "抖音VR直播体验", venue: "arXiv", authors: "Qing Xiao, Rongyi Chen, Jingjia Xiao, Tianyang Fu, Alice Qian Zhang, Xianzhe Fan, Bingbing Zhang, Zhicong Lu, Hong Shen", link: "https://arxiv.org/abs/2505.20623" },
+    { icon: "📚", year: "2025", title: "Exploring Influencers' and Users' Experiences in Douyin's Virtual Reality Live-Streaming", titleZh: "YouTube宗教视频", venue: "Proceedings of the 30th ACM Symposium on Virtual Reality Software and Technology", authors: "Rongyi Chen, Jingjia Xiao, Zilu Wang, Menghan Yin, Xianzhe Fan, Zihe Ran, Qing Xiao", link: "https://doi.org/10.1145/3641825.3689519" },
+    { icon: "🌐", year: "2025", title: "The Digital Landscape of God: Narrative, Visuals and Viewer Engagement of Religious Videos on YouTube", titleZh: "健康传播中的LLM", venue: "arXiv", authors: "Rongyi Chen, Ziyan Xin, Qing Xiao, Ruiwei Xiao, Jingjia Xiao, Bingbing Zhang, Hong Shen, Zhicong Lu", link: "https://arxiv.org/abs/2509.10957" }
   ];
 
   const researchData = {
