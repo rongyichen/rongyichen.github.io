@@ -15,8 +15,8 @@ const AcademicProfile = () => {
 
   const content = {
     en: {
-      tabs: { about: 'About', news: 'News', research: 'Research', projects: 'Projects', portfolio: 'Portfolio', experience: 'Internship' },
-      tabIcons: { about: '👤', news: '📰', research: '📚', projects: '💼', portfolio: '🎬', experience: '🏢' },
+      tabs: { about: 'About', news: 'News', research: 'Research', profession: 'Profession', lab: 'Experiment Platform' },
+      tabIcons: { about: '👤', news: '📰', research: '📚', profession: '💼', lab: '🧪' },
       profile: {
         name: "Rongyi Chen", title: "M.A. Student in Computational Communication",
         institution: "Center for Intelligent Media & Communication Research",
@@ -43,11 +43,11 @@ const AcademicProfile = () => {
           { icon: "🎖️", title: "Best Filming Award", org: "Hebei TV, 2022" }
         ]
       },
-      sections: { education: "Education", training: "Extra Training", awards: "Awards", featuredResearch: "Selected Publications", academicNews: "Academic News", industryNews: "Industry News", preprints: "Preprints", publications: "Publications", conferences: "Conferences", grants: "Grants", researchProjects: "Projects", videoProductions: "Videos", watchVideo: "Watch", lastUpdated: "Created by Rongyi | Dec 2025" }
+      sections: { education: "Education", training: "Extra Training", awards: "Awards", featuredResearch: "Selected Publications", academicNews: "Academic News", industryNews: "Industry News", preprints: "Preprints", publications: "Publications", conferences: "Non-archival Conference Presentations", grants: "Grants", researchProjects: "Projects", portfolio: "Portfolio", internship: "Internship", lab: "Lab", lastUpdated: "Created by Rongyi | Dec 2025" }
     },
     zh: {
-      tabs: { about: '关于', news: '动态', research: '研究', projects: '项目', portfolio: '作品', experience: '经历' },
-      tabIcons: { about: '👤', news: '📰', research: '📚', projects: '💼', portfolio: '🎬', experience: '🏢' },
+      tabs: { about: '关于', news: '动态', research: '研究', profession: '履历', lab: '实验平台' },
+      tabIcons: { about: '👤', news: '📰', research: '📚', profession: '💼', lab: '🧪' },
       profile: {
         name: "陈荣毅", title: "计算传播方向硕士研究生",
         institution: "智媒传播研究中心", university: "中南大学", expected: "预计2026年毕业", email: "rongyi@csu.edu.cn",
@@ -73,7 +73,7 @@ const AcademicProfile = () => {
           { icon: "🎖️", title: "最佳拍摄奖", org: "河北台, 2022" }
         ]
       },
-      sections: { education: "教育", training: "培训", awards: "荣誉", featuredResearch: "精选研究", academicNews: "学术动态", industryNews: "行业动态", preprints: "预印本", publications: "期刊", conferences: "会议", grants: "基金", researchProjects: "项目", videoProductions: "作品", watchVideo: "观看", lastUpdated: "Created by Rongyi | 2025年12月" }
+      sections: { education: "教育", training: "培训", awards: "荣誉", featuredResearch: "精选发表", academicNews: "学术动态", industryNews: "行业动态", preprints: "预印本", publications: "期刊论文", conferences: "非存档会议报告", grants: "科研基金", researchProjects: "科研项目", portfolio: "作品集", internship: "实习经历", lab: "实验室", lastUpdated: "Created by Rongyi | 2025年12月" }
     }
   };
 
@@ -116,24 +116,22 @@ const AcademicProfile = () => {
     ],
     publications: [
       { year: "2025", title: "Enhancing Trust or Fostering Misjudgment? Assessing the Impact of Emerging Geographic Information Displays on Social Media Users' Information Trust", authors: "Yalong Xiao, Rongyi Chen, Qing Xiao, Chengzhang Zhu, Jie Feng", venue: "International Journal of Human–Computer Interaction", doi: "https://doi.org/10.1080/10447318.2025.2524493" },
-      { year: "2025", title: "Artists and their poor: economic and symbolic inequality in distorted China's post-pandemic art subsidy policies", authors: "Jingjia Xiao, Qing Xiao, Rongyi Chen", venue: "Cultural Trends", doi: "https://doi.org/10.1080/09548963.2025.2557215" },
+      { year: "2025", title: "Artists and Their Poor: Economic and Symbolic Inequality in Distorted China's Post-pandemic Art Subsidy Policies", authors: "Jingjia Xiao, Qing Xiao, Rongyi Chen", venue: "Cultural Trends", doi: "https://doi.org/10.1080/09548963.2025.2557215" },
       { year: "2024", title: "Exploring Influencers' and Users' Experiences in Douyin's Virtual Reality Live-Streaming", authors: "Rongyi Chen, Jingjia Xiao, Zilu Wang, Menghan Yin, Xianzhe Fan, Zihe Ran, Qing Xiao", venue: "ACM VRST 2024", doi: "https://doi.org/10.1145/3641825.3689519" },
-      { year: "2024", title: "The power of the civilian hero: Effective strategies for local media coverage in response to information epidemics", authors: "Chuchu Zhao, Rongyi Chen*", venue: "LabCom Books", doi: "https://ecrea.eu/page-18206/13312675" },
-      { year: "2024", title: "Migrant youth aged 16 to 19 during social crises: Stress, deviant behavior, and identification with mainstream society", authors: "Hua Zhong, Qing Xiao, Rongyi Chen, Jingjia Xiao", venue: "Huxiang Law Review", doi: "https://mp.weixin.qq.com/s/fjACER5Um7StLb4HSPKXpA" }
+      { year: "2024", title: "The Power of the Civilian Hero: Effective Strategies for Local Media Coverage in Response to Information Epidemics", authors: "Chuchu Zhao, Rongyi Chen*", venue: "LabCom Books", doi: "https://ecrea.eu/page-18206/13312675" },
+      { year: "2024", title: "Migrant Youth Aged 16 to 19 During Social Crises: Stress, Deviant Behavior, and Identification with Mainstream Society", authors: "Hua Zhong, Qing Xiao, Rongyi Chen, Jingjia Xiao", venue: "Huxiang Law Review", doi: "https://mp.weixin.qq.com/s/fjACER5Um7StLb4HSPKXpA" }
     ],
     conferences: [
-      { year: "2025", title: "When Memes Become Mean: Discrimination Recognition and Group Norms in Adolescent Bullying", authors: "Rongyi Chen, Qing Xiao, Shike Lin, Menghan Yin, Jingjia Xiao, Hua Zhong, Bingbing Zhang", venue: "AEJMC 2025", location: "San Francisco, USA", award: "Second Place Faculty Paper Award" },
-      { year: "2025", title: "Responsible LLMs in Persuasive Health Message: Comparing Language Biases in General LLMs and Healthcare LLMs", authors: "Rongyi Chen, Honghua Pan, Ni Yuan, Yalong Xiao, Jie Feng", venue: "ICA 2025", location: "Denver, USA" },
-      { year: "2025", title: "The Artists and Their Poor: Economic Inequality in China's Post-Pandemic Art Subsidy Policies", authors: "Jingjia Xiao, Qing Xiao, Rongyi Chen", venue: "ICA 2025", location: "Denver, USA" },
-      { year: "2025", title: "How AI Constructs Disaster Narratives: A Comparative Analysis of LLMs in Multimodal Disaster News Production", authors: "Rui Zhang, Rongyi Chen", venue: "IAMCR 2025", location: "Singapore" },
-      { year: "2025", title: "An Emerging Platform Entertainment Model in China: Algorithms Regulation and the Composite Interaction of Live Streaming and Short Videos", authors: "Rongyi Chen, Chuyi Guo", venue: "ICA 2025 Pre-Conference", location: "Singapore" },
-      { year: "2024", title: "Have you seen the lovers in the game? Are they like us? Online Games and Game-Mediated Romantic Relationships", authors: "Jingrong Xu, Rongyi Chen, Haoran Dai", venue: "NCA 2024", location: "New Orleans, USA" },
-      { year: "2024", title: "Gresham's Law in Language Education: How Short Video Buzzwords Reshapes Adolescents' Expression Habits", authors: "Rongyi Chen, Shike Lin, Haoran Dai", venue: "IAMCR 2024", location: "Christchurch, New Zealand" },
-      { year: "2024", title: "The illusion of pluralistic and neutrality: How Twitter social bots show their opinion in Chinese political issue", authors: "Rongyi Chen, Qing Xiao, Haoran Dai", venue: "ECREA 2024", location: "Ljubljana, Slovenia" },
-      { year: "2024", title: "Urban voice: LLM-based public opinion visualization for human-centered urban planning", authors: "Rongyi Chen, Jingjia Xiao, Zilu Wang, Qing Xiao", venue: "ICSC 2024", location: "Guangzhou, China" },
-      { year: "2024", title: "Queering Sexual Desires through Recommendation Algorithms: Douyin, Soft-core Pornography Male Influencers, and Female/Male Homosexual Fans", authors: "Rongyi Chen, Qing Xiao, Jingjia Xiao", venue: "Cambridge Queer Studies 2024", location: "Cambridge, UK" },
-      { year: "2023", title: "Focus on Supporting Roles in TikTok's Live-streaming E-commerce: How Do Assistant Anchors Affect Audiences' Purchase Intention?", authors: "Rongyi Chen, Shike Lin, Huiying Zhang", venue: "TikTok Symposium 2023", location: "London, UK" },
-      { year: "2023", title: "Distorted emotional labor: an ethnography of a commercial live-streaming assistant anchor group", authors: "Rongyi Chen, Shike Lin", venue: "IAMCR 2023", location: "Lyon, France" }
+      { year: "2025", title: "When Memes Become Mean: Discrimination Recognition and Group Norms in Adolescent Bullying", authors: "Rongyi Chen, Qing Xiao, Shike Lin, Menghan Yin, Jingjia Xiao, Hua Zhong, Bingbing Zhang", venue: "AEJMC 2025 108th Annual Conference", location: "San Francisco, USA", award: "Second Place Faculty Paper Award" },
+      { year: "2025", title: "Responsible LLMs in Persuasive Health Message: Comparing Language Biases in General LLMs and Healthcare LLMs", authors: "Rongyi Chen, Honghua Pan, Ni Yuan, Yalong Xiao, Jie Feng", venue: "ICA 2025 75th Annual Conference", location: "Denver, USA" },
+      { year: "2025", title: "The Artists and Their Poor: Economic Inequality in China's Post-Pandemic Art Subsidy Policies", authors: "Jingjia Xiao, Qing Xiao, Rongyi Chen", venue: "ICA 2025 75th Annual Conference", location: "Denver, USA" },
+      { year: "2025", title: "How AI Constructs Disaster Narratives: A Comparative Analysis of LLMs in Multimodal Disaster News Production", authors: "Rui Zhang, Rongyi Chen", venue: "IAMCR 2025 Annual Conference", location: "Singapore" },
+      { year: "2025", title: "An Emerging Platform Entertainment Model in China: Algorithms Regulation and the Composite Interaction of Live Streaming and Short Videos", authors: "Rongyi Chen, Chuyi Guo", venue: "ICA 2025 Pre-Conference: Debating Creator Culture", location: "Singapore" },
+      { year: "2024", title: "Have You Seen the Lovers in the Game? Are They Like Us? Online Games and Game-Mediated Romantic Relationships", authors: "Jingrong Xu, Rongyi Chen, Haoran Dai", venue: "NCA 2024 110th Annual Convention", location: "New Orleans, USA" },
+      { year: "2024", title: "Gresham's Law in Language Education: How Short Video Buzzwords Reshape Adolescents' Expression Habits and Semantic Understanding Capabilities", authors: "Rongyi Chen, Shike Lin, Haoran Dai", venue: "IAMCR 2024 Annual Conference", location: "Christchurch, New Zealand" },
+      { year: "2024", title: "The Illusion of Pluralistic and Neutrality: How Twitter Social Bots Show Their Opinion in Chinese Political Issues", authors: "Rongyi Chen, Qing Xiao, Haoran Dai", venue: "ECREA 2024 10th European Communication Conference", location: "Ljubljana, Slovenia" },
+      { year: "2023", title: "Focus on Supporting Roles in TikTok's Live-Streaming E-Commerce: How Do Assistant Anchors Affect Audiences' Purchase Intention?", authors: "Rongyi Chen, Shike Lin, Huiying Zhang", venue: "TikTok Creators and Digital Economies Symposium 2023", location: "London, UK" },
+      { year: "2023", title: "Distorted Emotional Labor: An Ethnography of a Commercial Live-Streaming Assistant Anchor Group", authors: "Rongyi Chen, Shike Lin", venue: "IAMCR 2023 Annual Conference", location: "Lyon, France" }
     ]
   };
 
@@ -216,7 +214,7 @@ const AcademicProfile = () => {
 
         <main className="flex-1 p-6 lg:p-8 ml-80 lg:ml-96">
           <motion.nav initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="bg-white/80 backdrop-blur-md rounded-2xl shadow-lg p-3 mb-10 sticky top-6 z-40 border border-white/50">
-            <div className="flex flex-wrap gap-2">
+            <div className="flex justify-between gap-2">
               {Object.entries(t.tabs).map(([key, label]) => (
                 <button key={key} onClick={() => setActiveTab(key)} className={`px-8 py-2.5 rounded-xl font-bold text-base transition-all flex items-center gap-2 ${activeTab === key ? 'bg-white/60 backdrop-blur-lg bg-gradient-to-r from-purple-500/90 to-violet-400/90 text-white shadow-lg border border-white/40' : 'text-gray-600 hover:bg-purple-50'}`}>
                   <span>{t.tabIcons[key]}</span>{label}
@@ -277,57 +275,48 @@ const AcademicProfile = () => {
             )}
 
             {activeTab === 'research' && (
-              <motion.div key="research" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-6">
-                <div><h3 className="text-lg font-bold text-gray-800 mb-3">{t.sections.preprints}</h3>
-                  <div className="space-y-3">{researchData.preprints.map((p, i) => <div key={i} className="bg-white/80 backdrop-blur-md rounded-xl p-4 border border-white/50 shadow"><div className="flex items-start gap-3"><div className="flex-shrink-0 w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center"><span className="text-purple-600 font-bold text-sm">P{i+1}</span></div><div className="flex-1"><div className="flex items-center gap-2 mb-1"><span className="text-sm font-medium text-white bg-purple-500 px-1.5 py-0.5 rounded">{p.year}</span></div><h4 className="font-semibold text-gray-800 text-base">{p.title}</h4><p className="text-sm text-gray-600 mt-1">{highlightAuthor(p.authors, 'Rongyi Chen')}</p><a href={p.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-sm text-purple-600 hover:underline mt-1">{p.venue} <ExternalLink size={10} /></a></div></div></div>)}</div>
-                </div>
-                <div><h3 className="text-lg font-bold text-gray-800 mb-3">{t.sections.publications}</h3>
-                  <div className="space-y-3">{researchData.publications.map((p, i) => <div key={i} className="bg-white/80 backdrop-blur-md rounded-xl p-4 border border-white/50 shadow"><div className="flex items-start gap-3"><div className="flex-shrink-0 w-8 h-8 bg-violet-100 rounded-lg flex items-center justify-center"><span className="text-violet-600 font-bold text-sm">J{i+1}</span></div><div className="flex-1"><div className="flex items-center gap-2 mb-1"><span className="text-sm font-medium text-white bg-violet-500 px-1.5 py-0.5 rounded">{p.year}</span></div><h4 className="font-semibold text-gray-800 text-base">{p.title}</h4><p className="text-sm text-gray-600 mt-1">{highlightAuthor(p.authors, 'Rongyi Chen')}</p><p className="text-sm text-purple-600 mt-1">{p.venue}</p><a href={p.doi} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-purple-600 mt-1">DOI <ExternalLink size={10} /></a></div></div></div>)}</div>
-                </div>
-                <div><h3 className="text-lg font-bold text-gray-800 mb-3">{t.sections.conferences}</h3>
-                  <div className="space-y-3">{researchData.conferences.map((c, i) => <div key={i} className="bg-white/80 backdrop-blur-md rounded-xl p-4 border border-white/50 shadow"><div className="flex items-start gap-3"><div className="flex-shrink-0 w-8 h-8 bg-fuchsia-100 rounded-lg flex items-center justify-center"><span className="text-fuchsia-600 font-bold text-sm">C{i+1}</span></div><div className="flex-1"><div className="flex items-center gap-2 mb-1"><span className="text-sm font-medium text-white bg-fuchsia-500 px-1.5 py-0.5 rounded">{c.year}</span>{c.award && <span className="text-sm bg-yellow-100 text-yellow-700 px-1.5 py-0.5 rounded-full">🏆 {c.award}</span>}</div><h4 className="font-semibold text-gray-800 text-base">{c.title}</h4><p className="text-sm text-gray-600 mt-1">{highlightAuthor(c.authors, 'Rongyi Chen')}</p><div className="flex items-center gap-2 mt-1"><span className="text-sm text-purple-600">{c.venue}</span><span className="text-sm text-gray-500">· {c.location}</span></div></div></div></div>)}</div>
-                </div>
-              </motion.div>
-            )}
-
-            {activeTab === 'projects' && (
-              <motion.div key="projects" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-6">
+              <motion.div key="research" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-8">
                 <div>
-                  <div className="flex items-center mb-4"><div className="w-2 h-6 bg-gradient-to-b from-yellow-400 to-orange-500 rounded mr-2"></div><h3 className="text-lg font-bold text-gray-800">{t.sections.grants}</h3></div>
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">{projectsData.grants.map((g, i) => <div key={i} className="bg-gradient-to-br from-white to-yellow-50 rounded-xl p-4 border-2 border-yellow-100 shadow relative overflow-hidden"><div className="absolute top-0 right-0 w-14 h-14 bg-gradient-to-br from-yellow-100 to-orange-100 rounded-full opacity-30 -translate-y-6 translate-x-6"></div><div className="relative z-10"><div className="flex items-center justify-between mb-2"><span className="px-2 py-0.5 bg-gradient-to-r from-yellow-100 to-orange-100 text-yellow-800 rounded-full text-sm font-medium">{g.year}</span><div className="flex items-center"><span className="text-base mr-1">💰</span><span className="font-bold text-gray-700 text-base">{g.amount}</span></div></div><h4 className="font-semibold text-gray-800 mb-1 text-base">{language === 'en' ? g.title : g.titleZh}</h4><p className="text-sm text-gray-600 italic">{language === 'en' ? g.program : g.programZh}</p><span className="text-sm font-medium text-yellow-700 bg-yellow-100 px-1.5 py-0.5 rounded mt-2 inline-block">{g.role}</span></div></div>)}</div>
+                  <h3 className="text-lg font-bold text-gray-800 mb-4">{t.sections.preprints}</h3>
+                  <div className="space-y-3">{researchData.preprints.map((p, i) => <div key={i} className="bg-white/80 backdrop-blur-md rounded-xl p-4 border border-white/50 shadow"><div className="flex items-start justify-between gap-3"><div className="flex items-start gap-3 flex-1"><div className="flex-shrink-0 w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center"><span className="text-purple-600 font-bold text-sm">P{i+1}</span></div><div className="flex-1"><div className="flex items-center gap-2 mb-1"><span className="text-sm font-medium text-white bg-purple-500 px-2 py-0.5 rounded">{p.year}</span><span className="text-sm text-purple-600">{p.venue}</span></div><h4 className="font-semibold text-gray-800 text-base">{p.title}</h4><p className="text-sm text-gray-600 mt-1">{highlightAuthor(p.authors, 'Rongyi Chen')}</p></div></div><a href={p.link} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-500 flex-shrink-0 mt-1"><ExternalLink size={16} /></a></div></div>)}</div>
                 </div>
-                <div><h3 className="text-lg font-bold text-gray-800 mb-3">{t.sections.researchProjects}</h3>
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">{projectsData.projects.map((p, i) => <div key={i} className="bg-white/80 backdrop-blur-md rounded-xl p-3 border border-white/50 shadow"><h4 className="font-semibold text-gray-800 text-base">{language === 'en' ? p.title : p.titleZh}</h4><p className="text-sm text-gray-600 mt-1"><span className="text-purple-600 font-bold">{p.role}</span> · {language === 'en' ? p.meta : p.metaZh}</p>{p.funding && <span className="text-sm bg-gradient-to-r from-yellow-50 to-orange-50 text-yellow-700 px-1.5 py-0.5 rounded border border-yellow-200 mt-1 inline-block">{p.funding}</span>}</div>)}</div>
+                <div>
+                  <h3 className="text-lg font-bold text-gray-800 mb-4">{t.sections.publications}</h3>
+                  <div className="space-y-3">{researchData.publications.map((p, i) => <div key={i} className="bg-white/80 backdrop-blur-md rounded-xl p-4 border border-white/50 shadow"><div className="flex items-start justify-between gap-3"><div className="flex items-start gap-3 flex-1"><div className="flex-shrink-0 w-10 h-10 bg-violet-100 rounded-lg flex items-center justify-center"><span className="text-violet-600 font-bold text-sm">P{i+1}</span></div><div className="flex-1"><div className="flex items-center gap-2 mb-1"><span className="text-sm font-medium text-white bg-violet-500 px-2 py-0.5 rounded">{p.year}</span><span className="text-sm text-purple-600">{p.venue}</span></div><h4 className="font-semibold text-gray-800 text-base">{p.title}</h4><p className="text-sm text-gray-600 mt-1">{highlightAuthor(p.authors, 'Rongyi Chen')}</p></div></div><a href={p.doi} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-500 flex-shrink-0 mt-1"><ExternalLink size={16} /></a></div></div>)}</div>
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-gray-800 mb-4">{t.sections.conferences}</h3>
+                  <div className="space-y-3">{researchData.conferences.map((c, i) => <div key={i} className="bg-white/80 backdrop-blur-md rounded-xl p-4 border border-white/50 shadow"><div className="flex items-start gap-3"><div className="flex-shrink-0 w-10 h-10 bg-fuchsia-100 rounded-lg flex items-center justify-center"><span className="text-fuchsia-600 font-bold text-sm">C{i+1}</span></div><div className="flex-1"><div className="flex items-center gap-2 mb-1"><span className="text-sm font-medium text-white bg-fuchsia-500 px-2 py-0.5 rounded">{c.year}</span>{c.award && <span className="text-sm bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded-full">🏆 {c.award}</span>}</div><h4 className="font-semibold text-gray-800 text-base">{c.title}</h4><p className="text-sm text-gray-600 mt-1">{highlightAuthor(c.authors, 'Rongyi Chen')}</p><div className="flex items-center gap-2 mt-1"><span className="text-sm text-purple-600">{c.venue}</span><span className="text-sm text-gray-500">· {c.location}</span></div></div></div></div>)}</div>
+                </div>
+                <div>
+                  <div className="flex items-center mb-4"><div className="w-3 h-8 bg-gradient-to-b from-yellow-400 to-orange-500 rounded mr-3"></div><h3 className="text-lg font-bold text-gray-800">{t.sections.grants}</h3></div>
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">{projectsData.grants.map((g, i) => <div key={i} className="bg-gradient-to-br from-white to-yellow-50 rounded-xl p-4 border-2 border-yellow-100 shadow relative overflow-hidden"><div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-yellow-100 to-orange-100 rounded-full opacity-30 -translate-y-8 translate-x-8"></div><div className="relative z-10"><div className="flex items-center justify-between mb-2"><span className="px-2 py-0.5 bg-gradient-to-r from-yellow-100 to-orange-100 text-yellow-800 rounded-full text-sm font-medium">{g.year}</span><div className="flex items-center"><span className="text-base mr-1">💰</span><span className="font-bold text-gray-700 text-sm">{g.amount}</span></div></div><h4 className="font-semibold text-gray-800 mb-1 text-base">{language === 'en' ? g.title : g.titleZh}</h4><p className="text-sm text-gray-600 italic">{language === 'en' ? g.program : g.programZh}</p><span className="text-sm font-medium text-yellow-700 bg-yellow-100 px-2 py-0.5 rounded mt-2 inline-block">{g.role}</span></div></div>)}</div>
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-gray-800 mb-4">{t.sections.researchProjects}</h3>
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">{projectsData.projects.map((p, i) => <div key={i} className="bg-white/80 backdrop-blur-md rounded-xl p-4 border border-white/50 shadow"><h4 className="font-semibold text-gray-800 text-base">{language === 'en' ? p.title : p.titleZh}</h4><p className="text-sm text-gray-600 mt-1"><span className="text-purple-600 font-bold">{p.role}</span> · {language === 'en' ? p.meta : p.metaZh}</p>{p.funding && <span className="text-sm bg-gradient-to-r from-yellow-50 to-orange-50 text-yellow-700 px-2 py-0.5 rounded border border-yellow-200 mt-2 inline-block">{p.funding}</span>}</div>)}</div>
                 </div>
               </motion.div>
             )}
 
-            {activeTab === 'portfolio' && (
-              <motion.div key="portfolio" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
-                <h3 className="text-lg font-bold text-gray-800 mb-4">{t.sections.videoProductions}</h3>
-                <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">{portfolioData.map((v, i) => <motion.a key={i} href={v.url} target="_blank" rel="noopener noreferrer" whileHover={{ y: -3, scale: 1.02 }} className="bg-white/80 backdrop-blur-md rounded-xl overflow-hidden border border-white/50 shadow hover:shadow-lg transition-all group block"><div className="h-14 bg-gradient-to-br from-purple-100 via-violet-100 to-fuchsia-100 flex items-center justify-center"><span className="text-2xl group-hover:scale-110 transition-transform">{v.emoji}</span></div><div className="p-2.5"><div className="flex items-center gap-1.5 mb-1"><span className="text-sm text-purple-600 bg-purple-100 px-1 py-0.5 rounded">{v.year}</span><span className="text-sm text-gray-500 truncate">{v.org}</span></div><h4 className="font-medium text-gray-800 text-sm line-clamp-2">{language === 'en' ? v.title : v.titleZh}</h4><div className="flex items-center gap-1 mt-1.5 text-purple-600 text-sm"><Film size={10} />{t.sections.watchVideo}</div></div></motion.a>)}</div>
+            {activeTab === 'lab' && (
+              <motion.div key="lab" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
+                <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-lg p-12 border border-white/50 text-center">
+                  <span className="text-6xl mb-4 block">🧪</span>
+                  <h3 className="text-xl font-bold text-gray-800 mb-2">{t.sections.lab}</h3>
+                  <p className="text-gray-500">{language === 'en' ? 'Coming soon...' : '即将上线...'}</p>
+                </div>
               </motion.div>
             )}
-
-            {activeTab === 'experience' && (
-              <motion.div key="experience" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                  {experienceData.map((e, i) => (
-                    <motion.div key={i} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.03 }} className="bg-white/80 backdrop-blur-md rounded-xl p-4 border border-white/50 shadow">
-                      <div className="flex items-start justify-between gap-3">
-                        <div className="flex-1">
-                          <span className="text-sm text-white bg-purple-500 px-2 py-0.5 rounded mb-2 inline-block">{e.period}</span>
-                          <h4 className="font-bold text-gray-800 text-base">{language === 'en' ? e.title : e.titleZh}</h4>
-                          <p className="text-sm text-purple-600 mt-1">{language === 'en' ? e.org : e.orgZh}</p>
-                          <p className="text-sm text-gray-600 mt-2">{language === 'en' ? e.desc : e.descZh}</p>
-                        </div>
-                        <div className="flex-shrink-0 w-12 h-12 bg-gray-50 rounded-lg flex items-center justify-center border border-gray-100">
-                          <img src={e.logo} alt="logo" className="w-9 h-9 object-contain" onError={(ev) => { ev.target.style.display = 'none'; ev.target.nextSibling.style.display = 'flex'; }} />
-                          <div className="w-9 h-9 bg-gradient-to-br from-purple-100 to-violet-100 rounded items-center justify-center hidden"><Briefcase size={14} className="text-purple-400" /></div>
-                        </div>
-                      </div>
-                    </motion.div>
-                  ))}
+            {activeTab === 'profession' && (
+              <motion.div key="profession" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-8">
+                <div>
+                  <h3 className="text-lg font-bold text-gray-800 mb-4">{t.sections.portfolio}</h3>
+                  <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">{portfolioData.map((v, i) => <motion.a key={i} href={v.url} target="_blank" rel="noopener noreferrer" whileHover={{ y: -3, scale: 1.02 }} className="bg-white/80 backdrop-blur-md rounded-xl overflow-hidden border border-white/50 shadow hover:shadow-lg transition-all group block"><div className="h-14 bg-gradient-to-br from-purple-100 via-violet-100 to-fuchsia-100 flex items-center justify-center"><span className="text-2xl group-hover:scale-110 transition-transform">🎬</span></div><div className="p-2.5"><div className="flex items-center gap-1.5 mb-1"><span className="text-sm text-purple-600 bg-purple-100 px-1.5 py-0.5 rounded">{v.year}</span><span className="text-sm text-gray-500 truncate">{v.org}</span></div><h4 className="font-medium text-gray-800 text-sm line-clamp-2">{language === 'en' ? v.title : v.titleZh}</h4><p className="text-sm text-gray-500 mt-1">{language === 'en' ? v.desc : v.descZh}</p></div></motion.a>)}</div>
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-gray-800 mb-4">{t.sections.internship}</h3>
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">{experienceData.map((e, i) => <motion.div key={i} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.03 }} className="bg-white/80 backdrop-blur-md rounded-xl p-4 border border-white/50 shadow"><div className="flex items-start justify-between gap-3"><div className="flex-1"><span className="text-sm text-white bg-purple-500 px-2 py-0.5 rounded mb-2 inline-block">{e.period}</span><h4 className="font-bold text-gray-800 text-base">{language === 'en' ? e.title : e.titleZh}</h4><p className="text-sm text-purple-600 mt-1">{language === 'en' ? e.org : e.orgZh}</p><p className="text-sm text-gray-600 mt-2">{language === 'en' ? e.desc : e.descZh}</p></div><div className="flex-shrink-0 w-12 h-12 bg-gray-50 rounded-lg flex items-center justify-center border border-gray-100"><img src={e.logo} alt="logo" className="w-9 h-9 object-contain" onError={(ev) => { ev.target.style.display = 'none'; ev.target.nextSibling.style.display = 'flex'; }} /><div className="w-9 h-9 bg-gradient-to-br from-purple-100 to-violet-100 rounded items-center justify-center hidden"><Briefcase size={14} className="text-purple-400" /></div></div></div></motion.div>)}</div>
                 </div>
               </motion.div>
             )}
