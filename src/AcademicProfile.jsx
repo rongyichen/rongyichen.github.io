@@ -43,7 +43,7 @@ const AcademicProfile = () => {
           { icon: "🎖️", title: "Best Cinematography Award", org: "Hebei Radio and Television Station, 2022" }
         ]
       },
-      sections: { education: "Education", training: "Extra Training", awards: "Awards", featuredResearch: "Selected Publications", academicNews: "Academic News", industryNews: "Industry News", preprints: "Preprints", publications: "Publications", conferences: "Non-archival Conference Presentations", grants: "Grants", researchProjects: "Projects", portfolio: "Portfolio", internship: "Internship", lab: "Lab", lastUpdated: "Created by Rongyi | Dec 2025" }
+      sections: { education: "Education", training: "Extra Training", awards: "Awards", featuredResearch: "Selected Publications", academicNews: "Academic News", industryNews: "Professional Practice News", preprints: "Preprints", publications: "Publications", conferences: "Non-archival Conference Presentations", grants: "Grants", researchProjects: "Projects", portfolio: "Portfolio", internship: "Internship", lab: "Lab", lastUpdated: "Created by Rongyi | Dec 2025" }
     },
     zh: {
       tabs: { about: '关于', news: '动态', research: '研究', profession: '履历', lab: '实验平台' },
