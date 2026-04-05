@@ -887,15 +887,17 @@ const AcademicProfile = () => {
                             </span>
                           </div>
                           <div className="flex-1">
-                            <div className="flex items-center gap-2 mb-2">
-                              <h4 className="text-lg font-semibold text-gray-800">
+                            <div className="mb-2">
+                              <h4 className="text-lg font-semibold text-gray-800 mb-2">
                                 <span className="text-primary-600">
                                   When Memes Become Mean: Discrimination Recognition and Group Norms in Adolescent Bullying
                                 </span>
                               </h4>
-                              <span className="text-sm bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded-full">
-                                🏆 Second Place Faculty Paper Award, Mass Communication and Society Division
-                              </span>
+                              <div className="flex items-center gap-2">
+                                <span className="text-sm bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded-full">
+                                  🏆 Second Place Faculty Paper Award, Mass Communication and Society Division
+                                </span>
+                              </div>
                             </div>
                             <p className="text-sm text-gray-600 mb-2">{highlightAuthor(formatAuthors('Rongyi Chen, Qing Xiao, Shike Lin, Menghan Yin, Jingjia Xiao, Hua Zhong, Bingbing Zhang'), 'Rongyi Chen')}</p>
                             <p className="text-sm text-gray-500 italic">2025 Association for Education in Journalism and Mass Communication (AEJMC) 108th Annual Conference</p>
