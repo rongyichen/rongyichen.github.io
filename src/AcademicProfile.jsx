@@ -833,7 +833,7 @@ const AcademicProfile = () => {
                               </a>
                             </h4>
                             <p className="text-sm text-gray-600 mb-2">{highlightAuthor(formatAuthors('Qing Xiao, Rongyi Chen, Jingjia Xiao, Tianyang Fu, Alice Qian Zhang, Xianzhe Fan, Bingbing Zhang, Zhicong Lu, Hong Shen'), 'Rongyi Chen')}</p>
-                            <p className="text-sm text-gray-500 italic">Proceedings of the 29th ACM Conference on Computer-Supported Cooperative Work and Social Computing (CSCW 2026)</p>
+                            <p className="text-sm text-gray-500 italic">Proceedings of the ACM on Human-Computer Interaction, CSCW (CSCW’26)</p>
                           </div>
                         </div>
                       </div>
