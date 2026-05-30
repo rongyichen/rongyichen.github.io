@@ -53,15 +53,15 @@ const AcademicProfile = () => {
   ];
 
   const recentPublications = [
-    { title: "Institutionalizing Folk Theories of Algorithms: How MCNs Govern Algorithmic Labor in Chinese Live-Streaming", authors: "Qing Xiao, Rongyi Chen, Jingjia Xiao, et al.", venue: "CSCW Companion '26: Companion Publication of the 2025 Conference on Computer-Supported Cooperative Work and Social Computing", link: "https://arxiv.org/abs/2505.20623" },
+    { title: "Constructing Algorithmic Authority: How Multi-Channel Networks (MCNs) Govern Live-Streaming Labor in China", authors: "Qing Xiao, Rongyi Chen, Jingjia Xiao, et al.", venue: "Proceedings of the ACM on Human-Computer Interaction, CSCW (CSCW’26)", link: "https://arxiv.org/abs/2505.20623" },
     { title: "The Digital Landscape of God: Narrative, Visuals and Viewer Engagement of Religious Videos on YouTube", authors: "Rongyi Chen, Ziyan Xin, Qing Xiao, et al.", venue: "Proceedings of the 20th International AAAI Conference on Web and Social Media (ICWSM 2026)", link: "https://ojs.aaai.org/index.php/ICWSM/article/view/42649" },
     { title: "Enhancing Trust or Fostering Misjudgment? Assessing the Impact of Emerging Geographic Information Displays on Social Media Users' Information Trust", authors: "Yalong Xiao, Rongyi Chen, Qing Xiao, et al.", venue: "International Journal of Human–Computer Interaction (IJHCI)", link: "https://doi.org/10.1080/10447318.2025.2524493" }
   ];
 
   const recentNews = [
-    { date: "Mar 2026", title: "Paper Accepted by CSCW 2026", content: "Paper 'Institutionalizing Folk Theories of Algorithms' accepted to The 29th ACM Conference on Computer-Supported Cooperative Work and Social Computing." },
-    { date: "Mar 2026", title: "Paper Accepted by ICWSM 2026", content: "Paper 'The Digital Landscape of God' accepted to The 20th International AAAI Conference on Web and Social Media." },
-    { date: "Dec 2025", title: "Admitted to Peking University Ph.D. Program", content: "Received pre-admission to the Ph.D. program in Communication Studies at Peking University." }
+    { date: "May 2026", title: "Named Hunan Outstanding Graduate Student", content: "Received the Hunan Province Outstanding Graduate Student honor on May 29, 2026." },
+    { date: "Mar 2026", title: "Paper Accepted by CSCW 2026", content: "Paper 'Constructing Algorithmic Authority' accepted to The 29th ACM Conference on Computer-Supported Cooperative Work and Social Computing." },
+    { date: "Mar 2026", title: "Paper Accepted by ICWSM 2026", content: "Paper 'The Digital Landscape of God' accepted to The 20th International AAAI Conference on Web and Social Media." }
   ];
 
   // 处理作者显示：只显示前三个作者，后面加et al.
@@ -83,7 +83,7 @@ const AcademicProfile = () => {
 
   const researchData = {
     preprints: [
-      { year: "2025", title: "Institutionalizing Folk Theories of Algorithms: How MCNs Govern Algorithmic Labor in Chinese Live-Streaming", authors: "Qing Xiao, Rongyi Chen, Jingjia Xiao, Tianyang Fu, Alice Qian Zhang, Xianzhe Fan, Bingbing Zhang, Zhicong Lu, Hong Shen", venue: "arXiv", link: "https://arxiv.org/abs/2505.20623" }
+      { year: "2025", title: "Constructing Algorithmic Authority: How Multi-Channel Networks (MCNs) Govern Live-Streaming Labor in China", authors: "Qing Xiao, Rongyi Chen, Jingjia Xiao, Tianyang Fu, Alice Qian Zhang, Xianzhe Fan, Bingbing Zhang, Zhicong Lu, Hong Shen", venue: "arXiv", link: "https://arxiv.org/abs/2505.20623" }
     ],
     publications: [
       { year: "2026", title: "The Digital Landscape of God: Narrative, Visuals and Viewer Engagement of Religious Videos on YouTube", authors: "Rongyi Chen, Ziyan Xin, Qing Xiao, Ruiwei Xiao, Jingjia Xiao, Bingbing Zhang, Hong Shen, Zhicong Lu", venue: "Proceedings of the 20th International AAAI Conference on Web and Social Media", doi: "https://ojs.aaai.org/index.php/ICWSM/article/view/42649" },
@@ -183,7 +183,7 @@ const AcademicProfile = () => {
       ].filter(p =>
         p.title === "Enhancing Trust or Fostering Misjudgment? Assessing the Impact of Emerging Geographic Information Displays on Social Media Users' Information Trust" ||
         p.title === "The Digital Landscape of God: Narrative, Visuals and Viewer Engagement of Religious Videos on YouTube" ||
-        p.title === "Institutionalizing Folk Theories of Algorithms: How MCNs Govern Algorithmic Labor in Chinese Live-Streaming" ||
+        p.title === "Constructing Algorithmic Authority: How Multi-Channel Networks (MCNs) Govern Live-Streaming Labor in China" ||
         p.title === "Responsible LLMs in Persuasive Health Message: Comparing Language Biases in General LLMs and Healthcare LLMs" ||
         p.title === "How AI Constructs Disaster Narratives: A Comparative Analysis of LLMs in Multimodal Disaster News Production"
       )
@@ -252,9 +252,6 @@ const AcademicProfile = () => {
         ...researchData.conferences
       ].filter(p =>
         p.title === "The Digital Landscape of God: Narrative, Visuals and Viewer Engagement of Religious Videos on YouTube" ||
-        p.title === "Institutionalizing Folk Theories of Algorithms: How MCNs Govern Algorithmic Labor in Chinese Live-Streaming" ||
-        p.title === "When Memes Become Mean: Discrimination Recognition and Group Norms in Adolescent Bullying" ||
-        p.title === "Gresham's Law in Language Education: How Short Video Buzzwords Reshape Adolescents' Expression Habits and Semantic Understanding Capabilities" ||
         p.title === "The Illusion of Pluralistic and Neutrality: How Twitter Social Bots Show Their Opinion in Chinese Political Issues"
       )
     },
@@ -290,7 +287,7 @@ const AcademicProfile = () => {
         ...researchData.publications,
         ...researchData.conferences
       ].filter(p =>
-        p.title === "Institutionalizing Folk Theories of Algorithms: How MCNs Govern Algorithmic Labor in Chinese Live-Streaming" ||
+        p.title === "Constructing Algorithmic Authority: How Multi-Channel Networks (MCNs) Govern Live-Streaming Labor in China" ||
         p.title === "Exploring Influencers' and Users' Experiences in Douyin's Virtual Reality Live-Streaming" ||
         p.title === "An Emerging Platform Entertainment Model in China: Algorithms Regulation and the Composite Interaction of Live Streaming and Short Videos"
       )
@@ -327,7 +324,7 @@ const AcademicProfile = () => {
         ...researchData.conferences
       ].filter(p =>
         p.title === "The Digital Landscape of God: Narrative, Visuals and Viewer Engagement of Religious Videos on YouTube" ||
-        p.title === "Institutionalizing Folk Theories of Algorithms: How MCNs Govern Algorithmic Labor in Chinese Live-Streaming" ||
+        p.title === "Constructing Algorithmic Authority: How Multi-Channel Networks (MCNs) Govern Live-Streaming Labor in China" ||
         p.title === "When Memes Become Mean: Discrimination Recognition and Group Norms in Adolescent Bullying" ||
         p.title === "Responsible LLMs in Persuasive Health Message: Comparing Language Biases in General LLMs and Healthcare LLMs" ||
         p.title === "How AI Constructs Disaster Narratives: A Comparative Analysis of LLMs in Multimodal Disaster News Production" ||
@@ -353,7 +350,8 @@ const AcademicProfile = () => {
 
   const newsData = {
     academic: [
-      { date: "2026-03-18", title: "🎉 Paper Accepted by CSCW 2026!", content: "Paper 'Institutionalizing Folk Theories of Algorithms: How MCNs Govern Algorithmic Labor in Chinese Live-Streaming' accepted to The 29th ACM Conference on Computer-Supported Cooperative Work and Social Computing (CSCW 2026)." },
+      { date: "2026-05-29", title: "🏆 Named Hunan Outstanding Graduate Student!", content: "Received the Hunan Province Outstanding Graduate Student honor." },
+      { date: "2026-03-18", title: "🎉 Paper Accepted by CSCW 2026!", content: "Paper 'Constructing Algorithmic Authority: How Multi-Channel Networks (MCNs) Govern Live-Streaming Labor in China' accepted to The 29th ACM Conference on Computer-Supported Cooperative Work and Social Computing (CSCW 2026)." },
       { date: "2026-03-16", title: "🎉 Paper Accepted by ICWSM 2026!", content: "Paper 'The Digital Landscape of God: Narrative, Visuals and Viewer Engagement of Religious Videos on YouTube' accepted to The 20th International AAAI Conference on Web and Social Media (ICWSM 2026)." },
       { date: "2025-12-24", title: "🎓 Admitted to Peking University Ph.D. Program!", content: "Received pre-admission to the Ph.D. program in Communication Studies at the School of Journalism and Communication, Peking University, focusing on Big Data & AI Marketing Communication. Starting September 2026." },
       { date: "2025-09-10", title: "📄 Paper Published in Cultural Trends!", content: "Published co-authored paper 'Artists and Their Poor: Economic and Symbolic Inequality in Distorted China's Post-Pandemic Art Subsidy Policies' in Cultural Trends." },
@@ -742,6 +740,9 @@ const AcademicProfile = () => {
                     </div>
 
                     <h3 className="text-xl font-semibold text-gray-800 mt-8 mb-4">Professional Experience</h3>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      Currently collaborating as a photographer with multiple photography studios and production companies, conducting commercial shoots for well-known celebrities and million-follower influencers, as well as event photography and videography for large-scale events, variety shows, and gala productions.
+                    </p>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                       <div className="bg-white border border-gray-200 rounded-lg p-4 flex flex-col items-center justify-center text-center hover:shadow-sm transition-shadow">
                         <div className="w-12 h-12 bg-gray-50 rounded flex items-center justify-center mb-2">
@@ -850,11 +851,11 @@ const AcademicProfile = () => {
                           <div className="flex-1">
                             <h4 className="text-lg font-semibold text-gray-800 mb-2">
                               <a href="https://arxiv.org/abs/2505.20623" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">
-                                Institutionalizing Folk Theories of Algorithms: How MCNs Govern Algorithmic Labor in Chinese Live-Streaming
+                                Constructing Algorithmic Authority: How Multi-Channel Networks (MCNs) Govern Live-Streaming Labor in China
                               </a>
                             </h4>
                             <p className="text-sm text-gray-600 mb-2">{highlightAuthor(formatAuthors('Qing Xiao, Rongyi Chen, Jingjia Xiao, Tianyang Fu, Alice Qian Zhang, Xianzhe Fan, Bingbing Zhang, Zhicong Lu, Hong Shen'), 'Rongyi Chen')}</p>
-                            <p className="text-sm text-gray-500 italic">CSCW Companion '26: Companion Publication of the 2025 Conference on Computer-Supported Cooperative Work and Social Computing</p>
+                            <p className="text-sm text-gray-500 italic">Proceedings of the ACM on Human-Computer Interaction, CSCW (CSCW’26)</p>
                           </div>
                         </div>
                       </div>
