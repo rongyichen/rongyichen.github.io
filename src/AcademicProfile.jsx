@@ -698,6 +698,13 @@ const AcademicProfile = () => {
                       <div className="flex items-start gap-2">
                         <span className="text-primary-600">🏆</span>
                         <div>
+                          <p className="font-medium text-gray-800">Hunan Province Outstanding Graduate Student</p>
+                          <p className="text-sm text-gray-600">Hunan Province, 2026</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <span className="text-primary-600">🏆</span>
+                        <div>
                           <p className="font-medium text-gray-800">National Scholarship</p>
                           <p className="text-sm text-gray-600">Ministry of Education of China, 2025</p>
                         </div>
@@ -740,9 +747,19 @@ const AcademicProfile = () => {
                     </div>
 
                     <h3 className="text-xl font-semibold text-gray-800 mt-8 mb-4">Professional Experience</h3>
-                    <p className="text-gray-700 leading-relaxed mb-4">
-                      Currently collaborating as a photographer with multiple photography studios and production companies, conducting commercial shoots for well-known celebrities and million-follower influencers, as well as event photography and videography for large-scale events, variety shows, and gala productions.
-                    </p>
+                    <div className="bg-white border border-gray-200 border-l-4 border-l-primary-500 p-4 mb-5 shadow-sm">
+                      <div className="flex items-start justify-between gap-4 mb-2">
+                        <div>
+                          <p className="font-semibold text-gray-800">Commercial Photographer & Videographer</p>
+                          <p className="text-sm text-primary-600">Current freelance collaborations</p>
+                        </div>
+                        <span className="text-sm font-medium text-white bg-primary-600 px-2 py-0.5 rounded">Current</span>
+                      </div>
+                      <p className="text-gray-700 leading-relaxed">
+                        Collaborating with photography studios and production companies on commercial shoots for well-known celebrities and million-follower influencers, as well as event photography and videography for large-scale events, variety shows, and gala productions.
+                      </p>
+                    </div>
+                    <h4 className="text-sm font-semibold uppercase text-gray-500 mb-3">Selected Organizations</h4>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                       <div className="bg-white border border-gray-200 rounded-lg p-4 flex flex-col items-center justify-center text-center hover:shadow-sm transition-shadow">
                         <div className="w-12 h-12 bg-gray-50 rounded flex items-center justify-center mb-2">
@@ -791,6 +808,30 @@ const AcademicProfile = () => {
                           <img src="/images/logos/zhanjiang.jpeg" alt="Zhanjiang Radio and Television" className="w-8 h-8 object-contain" />
                         </div>
                         <p className="font-medium text-gray-800 text-sm">Zhanjiang TV</p>
+                      </div>
+                      <div className="bg-white border border-gray-200 rounded-lg p-4 flex flex-col items-center justify-center text-center hover:shadow-sm transition-shadow">
+                        <div className="w-12 h-12 bg-gray-50 rounded flex items-center justify-center mb-2">
+                          <span className="text-primary-600 font-semibold text-sm">XH</span>
+                        </div>
+                        <p className="font-medium text-gray-800 text-sm">Xinhua Net</p>
+                      </div>
+                      <div className="bg-white border border-gray-200 rounded-lg p-4 flex flex-col items-center justify-center text-center hover:shadow-sm transition-shadow">
+                        <div className="w-12 h-12 bg-gray-50 rounded flex items-center justify-center mb-2">
+                          <span className="text-primary-600 font-semibold text-sm">CETV</span>
+                        </div>
+                        <p className="font-medium text-gray-800 text-sm">China Education Network TV</p>
+                      </div>
+                      <div className="bg-white border border-gray-200 rounded-lg p-4 flex flex-col items-center justify-center text-center hover:shadow-sm transition-shadow">
+                        <div className="w-12 h-12 bg-gray-50 rounded flex items-center justify-center mb-2">
+                          <span className="text-primary-600 font-semibold text-sm">QQ</span>
+                        </div>
+                        <p className="font-medium text-gray-800 text-sm">QQ Music</p>
+                      </div>
+                      <div className="bg-white border border-gray-200 rounded-lg p-4 flex flex-col items-center justify-center text-center hover:shadow-sm transition-shadow">
+                        <div className="w-12 h-12 bg-gray-50 rounded flex items-center justify-center mb-2">
+                          <span className="text-primary-600 font-semibold text-sm">B</span>
+                        </div>
+                        <p className="font-medium text-gray-800 text-sm">Bilibili</p>
                       </div>
                     </div>
                   </div>
