@@ -53,8 +53,8 @@ const AcademicProfile = () => {
   ];
 
   const recentPublications = [
-    { title: "Institutionalizing Folk Theories of Algorithms: How MCNs Govern Algorithmic Labor in Chinese Live-Streaming", authors: "Qing Xiao, Rongyi Chen, Jingjia Xiao, et al.", venue: "Proceedings of the 29th ACM Conference on Computer-Supported Cooperative Work and Social Computing (CSCW 2026)", link: "https://arxiv.org/abs/2505.20623" },
-    { title: "The Digital Landscape of God: Narrative, Visuals and Viewer Engagement of Religious Videos on YouTube", authors: "Rongyi Chen, Ziyan Xin, Qing Xiao, et al.", venue: "Proceedings of the 20th International AAAI Conference on Web and Social Media (ICWSM 2026)", link: "https://arxiv.org/abs/2509.10957" },
+    { title: "Institutionalizing Folk Theories of Algorithms: How MCNs Govern Algorithmic Labor in Chinese Live-Streaming", authors: "Qing Xiao, Rongyi Chen, Jingjia Xiao, et al.", venue: "CSCW Companion '26: Companion Publication of the 2025 Conference on Computer-Supported Cooperative Work and Social Computing", link: "https://arxiv.org/abs/2505.20623" },
+    { title: "The Digital Landscape of God: Narrative, Visuals and Viewer Engagement of Religious Videos on YouTube", authors: "Rongyi Chen, Ziyan Xin, Qing Xiao, et al.", venue: "Proceedings of the 20th International AAAI Conference on Web and Social Media (ICWSM 2026)", link: "https://ojs.aaai.org/index.php/ICWSM/article/view/42649" },
     { title: "Enhancing Trust or Fostering Misjudgment? Assessing the Impact of Emerging Geographic Information Displays on Social Media Users' Information Trust", authors: "Yalong Xiao, Rongyi Chen, Qing Xiao, et al.", venue: "International Journal of Human–Computer Interaction (IJHCI)", link: "https://doi.org/10.1080/10447318.2025.2524493" }
   ];
 
@@ -83,10 +83,10 @@ const AcademicProfile = () => {
 
   const researchData = {
     preprints: [
-      { year: "2025", title: "The Digital Landscape of God: Narrative, Visuals and Viewer Engagement of Religious Videos on YouTube", authors: "Rongyi Chen, Ziyan Xin, Qing Xiao, Ruiwei Xiao, Jingjia Xiao, Bingbing Zhang, Hong Shen, Zhicong Lu", venue: "arXiv", link: "https://arxiv.org/abs/2505.20623" },
       { year: "2025", title: "Institutionalizing Folk Theories of Algorithms: How MCNs Govern Algorithmic Labor in Chinese Live-Streaming", authors: "Qing Xiao, Rongyi Chen, Jingjia Xiao, Tianyang Fu, Alice Qian Zhang, Xianzhe Fan, Bingbing Zhang, Zhicong Lu, Hong Shen", venue: "arXiv", link: "https://arxiv.org/abs/2505.20623" }
     ],
     publications: [
+      { year: "2026", title: "The Digital Landscape of God: Narrative, Visuals and Viewer Engagement of Religious Videos on YouTube", authors: "Rongyi Chen, Ziyan Xin, Qing Xiao, Ruiwei Xiao, Jingjia Xiao, Bingbing Zhang, Hong Shen, Zhicong Lu", venue: "Proceedings of the 20th International AAAI Conference on Web and Social Media", doi: "https://ojs.aaai.org/index.php/ICWSM/article/view/42649" },
       { year: "2025", title: "Enhancing Trust or Fostering Misjudgment? Assessing the Impact of Emerging Geographic Information Displays on Social Media Users' Information Trust", authors: "Yalong Xiao, Rongyi Chen, Qing Xiao, Chengzhang Zhu, Jie Feng", venue: "International Journal of Human–Computer Interaction", doi: "https://doi.org/10.1080/10447318.2025.2524493" },
       { year: "2025", title: "Artists and Their Poor: Economic and Symbolic Inequality in Distorted China's Post-pandemic Art Subsidy Policies", authors: "Jingjia Xiao, Qing Xiao, Rongyi Chen", venue: "Cultural Trends", doi: "https://doi.org/10.1080/09548963.2025.2557215" },
       { year: "2024", title: "Exploring Influencers' and Users' Experiences in Douyin's Virtual Reality Live-Streaming", authors: "Rongyi Chen, Jingjia Xiao, Zilu Wang, Menghan Yin, Xianzhe Fan, Zihe Ran, Qing Xiao", venue: "Proceedings of the 30th ACM Symposium on Virtual Reality Software and Technology (VRST 2024)", doi: "https://doi.org/10.1145/3641825.3689519" },
@@ -136,7 +136,7 @@ const AcademicProfile = () => {
     {
       id: "comm-tech",
       name: "Communication Technology",
-      description: "Study of how emerging technologies shape communication practices, media industries, and social structures",
+      description: "Examines how platforms, algorithms, AI systems, and interface infrastructures reshape information trust, media production, and public communication",
       svg: `<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
         <!-- 整体上移 -->
         <g transform="translate(0, -15)">
@@ -182,13 +182,16 @@ const AcademicProfile = () => {
         ...researchData.conferences
       ].filter(p =>
         p.title === "Enhancing Trust or Fostering Misjudgment? Assessing the Impact of Emerging Geographic Information Displays on Social Media Users' Information Trust" ||
-        p.title === "Responsible LLMs in Persuasive Health Message: Comparing Language Biases in General LLMs and Healthcare LLMs"
+        p.title === "The Digital Landscape of God: Narrative, Visuals and Viewer Engagement of Religious Videos on YouTube" ||
+        p.title === "Institutionalizing Folk Theories of Algorithms: How MCNs Govern Algorithmic Labor in Chinese Live-Streaming" ||
+        p.title === "Responsible LLMs in Persuasive Health Message: Comparing Language Biases in General LLMs and Healthcare LLMs" ||
+        p.title === "How AI Constructs Disaster Narratives: A Comparative Analysis of LLMs in Multimodal Disaster News Production"
       )
     },
     {
       id: "hci",
       name: "Human-Computer Interaction",
-      description: "Investigation of user interactions with digital systems, virtual reality environments, and intelligent interfaces",
+      description: "Investigates how people perceive, trust, and interact with emerging interfaces, including geographic displays, virtual reality, games, and intelligent media systems",
       svg: `<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
         <!-- VR头盔图标 -->
         <rect x="50" y="40" width="100" height="40" fill="#f0f2f7" stroke="#435b9e" stroke-width="1.5" rx="8"/>
@@ -202,14 +205,16 @@ const AcademicProfile = () => {
         ...researchData.conferences
       ].filter(p =>
         p.title === "Enhancing Trust or Fostering Misjudgment? Assessing the Impact of Emerging Geographic Information Displays on Social Media Users' Information Trust" ||
+        p.title === "The Digital Landscape of God: Narrative, Visuals and Viewer Engagement of Religious Videos on YouTube" ||
         p.title === "Exploring Influencers' and Users' Experiences in Douyin's Virtual Reality Live-Streaming" ||
-        p.title === "Have You Seen the Lovers in the Game? Are They Like Us? Online Games and Game-Mediated Romantic Relationships"
+        p.title === "Have You Seen the Lovers in the Game? Are They Like Us? Online Games and Game-Mediated Romantic Relationships" ||
+        p.title === "Responsible LLMs in Persuasive Health Message: Comparing Language Biases in General LLMs and Healthcare LLMs"
       )
     },
     {
       id: "social-computing",
       name: "Social Computing",
-      description: "Analysis of social behavior, information diffusion, and community dynamics in online social platforms",
+      description: "Analyzes social behavior, audience engagement, platform governance, online communities, and information diffusion in networked media environments",
       svg: `<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
         <!-- 整体上移 -->
         <g transform="translate(0, -10)">
@@ -246,13 +251,17 @@ const AcademicProfile = () => {
         ...researchData.publications,
         ...researchData.conferences
       ].filter(p =>
-        p.title === "The Digital Landscape of God: Narrative, Visuals and Viewer Engagement of Religious Videos on YouTube"
+        p.title === "The Digital Landscape of God: Narrative, Visuals and Viewer Engagement of Religious Videos on YouTube" ||
+        p.title === "Institutionalizing Folk Theories of Algorithms: How MCNs Govern Algorithmic Labor in Chinese Live-Streaming" ||
+        p.title === "When Memes Become Mean: Discrimination Recognition and Group Norms in Adolescent Bullying" ||
+        p.title === "Gresham's Law in Language Education: How Short Video Buzzwords Reshape Adolescents' Expression Habits and Semantic Understanding Capabilities" ||
+        p.title === "The Illusion of Pluralistic and Neutrality: How Twitter Social Bots Show Their Opinion in Chinese Political Issues"
       )
     },
     {
       id: "cscw",
       name: "Computer-Supported Cooperative Work",
-      description: "Research on collaborative technologies, distributed work systems, and group interaction dynamics",
+      description: "Studies platform-mediated labor, creator ecosystems, collaborative workflows, and how algorithmic systems structure cooperation and coordination",
       svg: `<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
         <!-- 协作工作图（上移15px） -->
         <g transform="translate(0, -15)">
@@ -281,13 +290,15 @@ const AcademicProfile = () => {
         ...researchData.publications,
         ...researchData.conferences
       ].filter(p =>
-        p.title === "Institutionalizing Folk Theories of Algorithms: How MCNs Govern Algorithmic Labor in Chinese Live-Streaming"
+        p.title === "Institutionalizing Folk Theories of Algorithms: How MCNs Govern Algorithmic Labor in Chinese Live-Streaming" ||
+        p.title === "Exploring Influencers' and Users' Experiences in Douyin's Virtual Reality Live-Streaming" ||
+        p.title === "An Emerging Platform Entertainment Model in China: Algorithms Regulation and the Composite Interaction of Live Streaming and Short Videos"
       )
     },
     {
       id: "ai-digital-culture",
       name: "AI and Digital Culture",
-      description: "Exploration of generative AI's impact on cultural production, content creation, and digital media ecosystems",
+      description: "Explores how generative AI, LLMs, algorithms, and platform cultures shape cultural production, media narratives, and technology-mediated values",
       svg: `<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
         <!-- AI生成内容图标 -->
         <rect x="30" y="30" width="60" height="50" fill="#f8fafc" stroke="#435b9e" stroke-width="1"/>
@@ -315,7 +326,10 @@ const AcademicProfile = () => {
         ...researchData.publications,
         ...researchData.conferences
       ].filter(p =>
+        p.title === "The Digital Landscape of God: Narrative, Visuals and Viewer Engagement of Religious Videos on YouTube" ||
+        p.title === "Institutionalizing Folk Theories of Algorithms: How MCNs Govern Algorithmic Labor in Chinese Live-Streaming" ||
         p.title === "When Memes Become Mean: Discrimination Recognition and Group Norms in Adolescent Bullying" ||
+        p.title === "Responsible LLMs in Persuasive Health Message: Comparing Language Biases in General LLMs and Healthcare LLMs" ||
         p.title === "How AI Constructs Disaster Narratives: A Comparative Analysis of LLMs in Multimodal Disaster News Production" ||
         p.title === "An Emerging Platform Entertainment Model in China: Algorithms Regulation and the Composite Interaction of Live Streaming and Short Videos"
       )
@@ -581,38 +595,45 @@ const AcademicProfile = () => {
                               Related Publications
                             </h4>
                             <div className="space-y-4">
-                              {activeResearchArea.papers.map((paper, i) => (
-                                <div key={i} className="border-l-4 border-primary-300 pl-4 py-2">
-                                  <div className="flex items-start justify-between gap-3">
-                                    <div className="flex-1">
-                                      <div className="flex items-center gap-2 mb-1">
-                                        <span className="text-sm font-medium text-white bg-primary-500 px-2 py-0.5 rounded">
-                                          {paper.year}
-                                        </span>
-                                        <span className="text-sm text-primary-600">{paper.venue}</span>
+                              {activeResearchArea.papers.map((paper, i) => {
+                                const paperUrl = paper.doi || paper.link;
+                                return (
+                                  <div key={i} className="border-l-4 border-primary-300 pl-4 py-2">
+                                    <div className="flex items-start justify-between gap-3">
+                                      <div className="flex-1">
+                                        <div className="flex items-center gap-2 mb-1">
+                                          <span className="text-sm font-medium text-white bg-primary-500 px-2 py-0.5 rounded">
+                                            {paper.year}
+                                          </span>
+                                          <span className="text-sm text-primary-600">{paper.venue}</span>
+                                        </div>
+                                        <h5 className="font-semibold text-gray-800">
+                                          {paperUrl ? (
+                                            <a href={paperUrl} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">
+                                              {paper.title}
+                                            </a>
+                                          ) : (
+                                            <span>{paper.title}</span>
+                                          )}
+                                        </h5>
+                                        <p className="text-sm text-gray-600 mt-1">
+                                          {highlightAuthor(formatAuthors(paper.authors), 'Rongyi Chen')}
+                                        </p>
                                       </div>
-                                      <h5 className="font-semibold text-gray-800">
-                                        <a href={paper.doi || paper.link} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">
-                                          {paper.title}
+                                      {paperUrl && (
+                                        <a
+                                          href={paperUrl}
+                                          target="_blank"
+                                          rel="noopener noreferrer"
+                                          className="text-gray-400 hover:text-primary-500 flex-shrink-0 mt-1"
+                                        >
+                                          <ExternalLink size={16} />
                                         </a>
-                                      </h5>
-                                      <p className="text-sm text-gray-600 mt-1">
-                                        {highlightAuthor(formatAuthors(paper.authors), 'Rongyi Chen')}
-                                      </p>
+                                      )}
                                     </div>
-                                    {paper.doi && (
-                                      <a
-                                        href={paper.doi}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-gray-400 hover:text-primary-500 flex-shrink-0 mt-1"
-                                      >
-                                        <ExternalLink size={16} />
-                                      </a>
-                                    )}
                                   </div>
-                                </div>
-                              ))}
+                                );
+                              })}
                               {activeResearchArea.papers.length === 0 && (
                                 <p className="text-gray-500 italic">No publications in this area yet.</p>
                               )}
@@ -808,7 +829,7 @@ const AcademicProfile = () => {
                           </div>
                           <div className="flex-1">
                             <h4 className="text-lg font-semibold text-gray-800 mb-2">
-                              <a href="https://arxiv.org/abs/2509.10957" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">
+                              <a href="https://ojs.aaai.org/index.php/ICWSM/article/view/42649" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">
                                 The Digital Landscape of God: Narrative, Visuals and Viewer Engagement of Religious Videos on YouTube
                               </a>
                             </h4>
@@ -833,7 +854,7 @@ const AcademicProfile = () => {
                               </a>
                             </h4>
                             <p className="text-sm text-gray-600 mb-2">{highlightAuthor(formatAuthors('Qing Xiao, Rongyi Chen, Jingjia Xiao, Tianyang Fu, Alice Qian Zhang, Xianzhe Fan, Bingbing Zhang, Zhicong Lu, Hong Shen'), 'Rongyi Chen')}</p>
-                            <p className="text-sm text-gray-500 italic">Proceedings of the ACM on Human-Computer Interaction, CSCW (CSCW’26)</p>
+                            <p className="text-sm text-gray-500 italic">CSCW Companion '26: Companion Publication of the 2025 Conference on Computer-Supported Cooperative Work and Social Computing</p>
                           </div>
                         </div>
                       </div>
@@ -1153,19 +1174,32 @@ const AcademicProfile = () => {
                 <div className="mt-3 max-h-60 overflow-y-auto custom-scrollbar">
                   {searchResults.length > 0 ? (
                     <div className="space-y-2">
-                      {searchResults.map((paper, i) => (
-                        <a
-                          key={i}
-                          href={paper.doi || paper.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="block p-2 bg-gray-50 hover:bg-primary-50 rounded text-sm"
-                        >
-                          <p className="text-primary-600 font-medium">{paper.title}</p>
-                          <p className="text-xs text-gray-500 mt-1">{highlightAuthor(formatAuthors(paper.authors), 'Rongyi Chen')}</p>
-                          <p className="text-xs text-gray-500 mt-1">{paper.venue} · {paper.year}</p>
-                        </a>
-                      ))}
+                      {searchResults.map((paper, i) => {
+                        const paperUrl = paper.doi || paper.link;
+                        const resultContent = (
+                          <>
+                            <p className="text-primary-600 font-medium">{paper.title}</p>
+                            <p className="text-xs text-gray-500 mt-1">{highlightAuthor(formatAuthors(paper.authors), 'Rongyi Chen')}</p>
+                            <p className="text-xs text-gray-500 mt-1">{paper.venue} · {paper.year}</p>
+                          </>
+                        );
+
+                        return paperUrl ? (
+                          <a
+                            key={i}
+                            href={paperUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block p-2 bg-gray-50 hover:bg-primary-50 rounded text-sm"
+                          >
+                            {resultContent}
+                          </a>
+                        ) : (
+                          <div key={i} className="block p-2 bg-gray-50 rounded text-sm">
+                            {resultContent}
+                          </div>
+                        );
+                      })}
                     </div>
                   ) : (
                     <p className="text-sm text-gray-500 py-2">No papers found</p>
