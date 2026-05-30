@@ -811,25 +811,25 @@ const AcademicProfile = () => {
                       </div>
                       <div className="bg-white border border-gray-200 rounded-lg p-4 flex flex-col items-center justify-center text-center hover:shadow-sm transition-shadow">
                         <div className="w-12 h-12 bg-gray-50 rounded flex items-center justify-center mb-2">
-                          <span className="text-primary-600 font-semibold text-sm">XH</span>
+                          <img src="/images/logos/xinhua.png" alt="Xinhua Net" className="w-8 h-8 object-contain" />
                         </div>
                         <p className="font-medium text-gray-800 text-sm">Xinhua Net</p>
                       </div>
                       <div className="bg-white border border-gray-200 rounded-lg p-4 flex flex-col items-center justify-center text-center hover:shadow-sm transition-shadow">
                         <div className="w-12 h-12 bg-gray-50 rounded flex items-center justify-center mb-2">
-                          <span className="text-primary-600 font-semibold text-sm">CETV</span>
+                          <img src="/images/logos/cetv.png" alt="China Education Network TV" className="w-8 h-8 object-contain" />
                         </div>
                         <p className="font-medium text-gray-800 text-sm">China Education Network TV</p>
                       </div>
                       <div className="bg-white border border-gray-200 rounded-lg p-4 flex flex-col items-center justify-center text-center hover:shadow-sm transition-shadow">
                         <div className="w-12 h-12 bg-gray-50 rounded flex items-center justify-center mb-2">
-                          <span className="text-primary-600 font-semibold text-sm">QQ</span>
+                          <img src="/images/logos/qqmusic.png" alt="QQ Music" className="w-8 h-8 object-contain" />
                         </div>
                         <p className="font-medium text-gray-800 text-sm">QQ Music</p>
                       </div>
                       <div className="bg-white border border-gray-200 rounded-lg p-4 flex flex-col items-center justify-center text-center hover:shadow-sm transition-shadow">
                         <div className="w-12 h-12 bg-gray-50 rounded flex items-center justify-center mb-2">
-                          <span className="text-primary-600 font-semibold text-sm">B</span>
+                          <img src="/images/logos/bilibili.png" alt="Bilibili" className="w-8 h-8 object-contain" />
                         </div>
                         <p className="font-medium text-gray-800 text-sm">Bilibili</p>
                       </div>
