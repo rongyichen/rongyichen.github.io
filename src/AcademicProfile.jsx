@@ -10,6 +10,8 @@ const AcademicProfile = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [activeResearchArea, setActiveResearchArea] = useState(null);
   const [showFullPublications, setShowFullPublications] = useState(false);
+  const [showAllAcademicNews, setShowAllAcademicNews] = useState(false);
+  const [showAllIndustryNews, setShowAllIndustryNews] = useState(false);
 
   const highlightAuthor = (authors, name) => {
     const parts = authors.split(name);
@@ -399,8 +401,8 @@ const AcademicProfile = () => {
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <h1 className="text-5xl font-light text-primary-600 mb-2">{profile.name}</h1>
-          <p className="text-xl text-gray-600">{profile.title} | {profile.university}</p>
-          <p className="text-lg text-primary-500 mt-1">{profile.nextStep}</p>
+          <p className="text-xl text-gray-600">{profile.title}</p>
+          <p className="text-lg text-primary-500 mt-1">{profile.nextStep} | {profile.university}</p>
         </div>
       </header>
 
@@ -872,6 +874,33 @@ const AcademicProfile = () => {
                   {!showFullPublications ? (
                     /* Selected Publications - 使用Featured Research格式 */
                     <div className="space-y-6">
+                      {/* 最新CHB论文 */}
+                      <div className="bg-white p-6 border border-gray-200 shadow-sm">
+                        <div className="flex items-start gap-4">
+                          <div className="flex-shrink-0 w-16 text-center">
+                            <span className="inline-block px-2 py-1 bg-primary-600 text-white text-sm font-medium">
+                              2026
+                            </span>
+                          </div>
+                          <div className="flex-1">
+                            <div className="mb-2">
+                              <h4 className="text-lg font-semibold text-gray-800 mb-2">
+                                <a href="https://doi.org/10.1016/j.chb.2026.109126" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">
+                                  When Social Media Memes Become Mean to Peers: Discrimination Recognition and Group Norms in Adolescent Bullying
+                                </a>
+                              </h4>
+                              <div className="flex items-center gap-2">
+                                <span className="text-sm bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded-full">
+                                  🏆 Second Place Faculty Paper Award, Mass Communication and Society Division, AEJMC 2025
+                                </span>
+                              </div>
+                            </div>
+                            <p className="text-sm text-gray-600 mb-2">{highlightAuthor(formatAuthors('Rongyi Chen, Qing Xiao, Shike Lin, Menghan Yin, Jingjia Xiao, Hua Zhong, Bingbing Zhang'), 'Rongyi Chen')}</p>
+                            <p className="text-sm text-gray-500 italic">Computers in Human Behavior</p>
+                          </div>
+                        </div>
+                      </div>
+
                       {/* 最新ICWSM论文 */}
                       <div className="bg-white p-6 border border-gray-200 shadow-sm">
                         <div className="flex items-start gap-4">
@@ -953,31 +982,6 @@ const AcademicProfile = () => {
                         </div>
                       </div>
 
-                      <div className="bg-white p-6 border border-gray-200 shadow-sm">
-                        <div className="flex items-start gap-4">
-                          <div className="flex-shrink-0 w-16 text-center">
-                            <span className="inline-block px-2 py-1 bg-primary-600 text-white text-sm font-medium">
-                              2026
-                            </span>
-                          </div>
-                          <div className="flex-1">
-                            <div className="mb-2">
-                              <h4 className="text-lg font-semibold text-gray-800 mb-2">
-                                <a href="https://doi.org/10.1016/j.chb.2026.109126" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">
-                                  When Social Media Memes Become Mean to Peers: Discrimination Recognition and Group Norms in Adolescent Bullying
-                                </a>
-                              </h4>
-                              <div className="flex items-center gap-2">
-                                <span className="text-sm bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded-full">
-                                  🏆 Second Place Faculty Paper Award, Mass Communication and Society Division, AEJMC 2025
-                                </span>
-                              </div>
-                            </div>
-                            <p className="text-sm text-gray-600 mb-2">{highlightAuthor(formatAuthors('Rongyi Chen, Qing Xiao, Shike Lin, Menghan Yin, Jingjia Xiao, Hua Zhong, Bingbing Zhang'), 'Rongyi Chen')}</p>
-                            <p className="text-sm text-gray-500 italic">Computers in Human Behavior</p>
-                          </div>
-                        </div>
-                      </div>
                     </div>
                   ) : (
                     /* 完整出版物列表 */
@@ -1127,7 +1131,7 @@ const AcademicProfile = () => {
                         Academic News
                       </h3>
                       <div className="space-y-4">
-                        {newsData.academic.map((item, i) => (
+                        {newsData.academic.slice(0, showAllAcademicNews ? newsData.academic.length : 4).map((item, i) => (
                           <div key={i} className="bg-white p-4 border border-gray-200 shadow-sm hover:shadow-md transition-shadow rounded">
                             <div className="mb-2">
                               <div className="bg-primary-100 text-primary-700 px-3 py-1 rounded text-sm font-medium inline-block mb-2">
@@ -1138,6 +1142,17 @@ const AcademicProfile = () => {
                             <p className="text-sm text-gray-600">{item.content}</p>
                           </div>
                         ))}
+                        {newsData.academic.length > 4 && (
+                          <button
+                            type="button"
+                            onClick={() => setShowAllAcademicNews(!showAllAcademicNews)}
+                            className="w-full flex items-center justify-center gap-2 py-3 text-sm font-medium text-primary-600 bg-white border border-gray-200 rounded hover:bg-primary-50 hover:border-primary-200 transition-colors"
+                            aria-expanded={showAllAcademicNews}
+                          >
+                            {showAllAcademicNews ? 'Show less' : `View all ${newsData.academic.length} updates`}
+                            <ChevronDown size={17} className={`transition-transform ${showAllAcademicNews ? 'rotate-180' : ''}`} />
+                          </button>
+                        )}
                       </div>
                     </div>
 
@@ -1147,7 +1162,7 @@ const AcademicProfile = () => {
                         Professional Practice News
                       </h3>
                       <div className="space-y-4">
-                        {newsData.industry.map((item, i) => (
+                        {newsData.industry.slice(0, showAllIndustryNews ? newsData.industry.length : 3).map((item, i) => (
                           <div key={i} className="bg-white p-4 border border-gray-200 shadow-sm hover:shadow-md transition-shadow rounded">
                             <div className="mb-2">
                               <div className="bg-primary-100 text-primary-700 px-3 py-1 rounded text-sm font-medium inline-block mb-2">
@@ -1158,6 +1173,17 @@ const AcademicProfile = () => {
                             <p className="text-sm text-gray-600">{item.content}</p>
                           </div>
                         ))}
+                        {newsData.industry.length > 3 && (
+                          <button
+                            type="button"
+                            onClick={() => setShowAllIndustryNews(!showAllIndustryNews)}
+                            className="w-full flex items-center justify-center gap-2 py-3 text-sm font-medium text-primary-600 bg-white border border-gray-200 rounded hover:bg-primary-50 hover:border-primary-200 transition-colors"
+                            aria-expanded={showAllIndustryNews}
+                          >
+                            {showAllIndustryNews ? 'Show less' : `View all ${newsData.industry.length} updates`}
+                            <ChevronDown size={17} className={`transition-transform ${showAllIndustryNews ? 'rotate-180' : ''}`} />
+                          </button>
+                        )}
                       </div>
                     </div>
                   </div>
