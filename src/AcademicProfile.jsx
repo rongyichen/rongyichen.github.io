@@ -12,6 +12,7 @@ const AcademicProfile = () => {
   const [showFullPublications, setShowFullPublications] = useState(false);
   const [showAllAcademicNews, setShowAllAcademicNews] = useState(false);
   const [showAllIndustryNews, setShowAllIndustryNews] = useState(false);
+  const [expandedAbstracts, setExpandedAbstracts] = useState({});
 
   const highlightAuthor = (authors, name) => {
     const parts = authors.split(name);
@@ -49,11 +50,6 @@ const AcademicProfile = () => {
     { id: 'contact', label: 'CONTACT' }
   ];
 
-  const featuredResearch = [
-    { year: "2025", title: "Enhancing Trust or Fostering Misjudgment? Assessing the Impact of Emerging Geographic Information Displays on Social Media Users' Information Trust", venue: "International Journal of Human–Computer Interaction (IJHCI)", authors: "Yalong Xiao, Rongyi Chen, Qing Xiao, Chengzhang Zhu, Jie Feng", link: "https://doi.org/10.1080/10447318.2025.2524493", excerpt: "This study examines how geographic information displays on social media affect users' trust in information, finding that while visualizations can enhance credibility, they may also lead to misjudgments of source reliability." },
-    { year: "2025", title: "Artists and their poor: economic and symbolic inequality in distorted China's post-pandemic art subsidy policies", venue: "Cultural Trends", authors: "Jingjia Xiao, Qing Xiao, Rongyi Chen", link: "https://doi.org/10.1080/09548963.2025.2557215", excerpt: "Analysis of post-pandemic art subsidy policies in China reveals systemic inequalities that perpetuate economic and symbolic disparities among artists." }
-  ];
-
   const recentPublications = [
     { title: "When Social Media Memes Become Mean to Peers: Discrimination Recognition and Group Norms in Adolescent Bullying", authors: "Rongyi Chen, Qing Xiao, Shike Lin, et al.", venue: "Computers in Human Behavior", link: "https://doi.org/10.1016/j.chb.2026.109126" },
     { title: "Constructing Algorithmic Authority: How Multi-Channel Networks (MCNs) Govern Live-Streaming Labor in China", authors: "Qing Xiao, Rongyi Chen, Jingjia Xiao, et al.", venue: "Proceedings of the ACM on Human-Computer Interaction, CSCW (CSCW’26)", link: "https://arxiv.org/abs/2505.20623" },
@@ -87,14 +83,26 @@ const AcademicProfile = () => {
 
   const researchData = {
     preprints: [
-      { year: "2025", title: "Constructing Algorithmic Authority: How Multi-Channel Networks (MCNs) Govern Live-Streaming Labor in China", authors: "Qing Xiao, Rongyi Chen, Jingjia Xiao, Tianyang Fu, Alice Qian Zhang, Xianzhe Fan, Bingbing Zhang, Zhicong Lu, Hong Shen", venue: "arXiv", link: "https://arxiv.org/abs/2505.20623" }
+      { id: "cscw-2026", year: "2025", title: "Constructing Algorithmic Authority: How Multi-Channel Networks (MCNs) Govern Live-Streaming Labor in China", authors: "Qing Xiao, Rongyi Chen, Jingjia Xiao, Tianyang Fu, Alice Qian Zhang, Xianzhe Fan, Bingbing Zhang, Zhicong Lu, Hong Shen", venue: "arXiv", link: "https://arxiv.org/abs/2505.20623", selected: true, selectedDate: "2026-03-18", selectedYear: "2026", selectedVenue: "Proceedings of the ACM on Human-Computer Interaction, CSCW (CSCW’26)" }
     ],
     publications: [
-      { year: "2026", title: "When Social Media Memes Become Mean to Peers: Discrimination Recognition and Group Norms in Adolescent Bullying", authors: "Rongyi Chen, Qing Xiao, Shike Lin, Menghan Yin, Jingjia Xiao, Hua Zhong, Bingbing Zhang", venue: "Computers in Human Behavior", doi: "https://doi.org/10.1016/j.chb.2026.109126", award: "Second Place Faculty Paper Award, Mass Communication and Society Division, AEJMC 2025" },
-      { year: "2026", title: "The Digital Landscape of God: Narrative, Visuals and Viewer Engagement of Religious Videos on YouTube", authors: "Rongyi Chen, Ziyan Xin, Qing Xiao, Ruiwei Xiao, Jingjia Xiao, Bingbing Zhang, Hong Shen, Zhicong Lu", venue: "Proceedings of the 20th International AAAI Conference on Web and Social Media", doi: "https://ojs.aaai.org/index.php/ICWSM/article/view/42649" },
-      { year: "2025", title: "Enhancing Trust or Fostering Misjudgment? Assessing the Impact of Emerging Geographic Information Displays on Social Media Users' Information Trust", authors: "Yalong Xiao, Rongyi Chen, Qing Xiao, Chengzhang Zhu, Jie Feng", venue: "International Journal of Human–Computer Interaction", doi: "https://doi.org/10.1080/10447318.2025.2524493" },
-      { year: "2025", title: "Artists and Their Poor: Economic and Symbolic Inequality in Distorted China's Post-pandemic Art Subsidy Policies", authors: "Jingjia Xiao, Qing Xiao, Rongyi Chen", venue: "Cultural Trends", doi: "https://doi.org/10.1080/09548963.2025.2557215" },
-      { year: "2024", title: "Exploring Influencers' and Users' Experiences in Douyin's Virtual Reality Live-Streaming", authors: "Rongyi Chen, Jingjia Xiao, Zilu Wang, Menghan Yin, Xianzhe Fan, Zihe Ran, Qing Xiao", venue: "Proceedings of the 30th ACM Symposium on Virtual Reality Software and Technology (VRST 2024)", doi: "https://doi.org/10.1145/3641825.3689519" },
+      {
+        id: "chb-2026",
+        year: "2026",
+        title: "When Social Media Memes Become Mean to Peers: Discrimination Recognition and Group Norms in Adolescent Bullying",
+        authors: "Rongyi Chen, Qing Xiao, Shike Lin, Menghan Yin, Jingjia Xiao, Hua Zhong, Bingbing Zhang",
+        venue: "Computers in Human Behavior",
+        doi: "https://doi.org/10.1016/j.chb.2026.109126",
+        award: "Second Place Faculty Paper Award, Mass Communication and Society Division, AEJMC 2025",
+        selected: true,
+        selectedDate: "2026-07-16",
+        abstract: "The widespread circulation of harmful memes on social media is increasingly recognized as a contributor to adolescent aggression, yet the mechanisms linking meme engagement to bullying behavior remain underexplored. Drawing on a neo-ecological framework that distinguishes physical and virtual microsystems, this study surveyed 1,319 Chinese middle school students to examine how harmful meme culture is transmitted within adolescent communities and translated into bullying. Using structural equation modeling, we identified adolescents’ difficulty in recognizing discrimination as a key cognitive mediator linking harmful meme usage to bullying behavior. Peer-group subjective norms emerged as the strongest factor in cultural transmission, while parental opposition and restricted media access appeared insufficient and showed no protective association. This challenges the traditional focus on parental supervision and media use, highlighting the prominent role of harmful meme culture within adolescent peer groups. These findings reframe adolescent bullying as a culturally mediated phenomenon shaped by peer normalization processes and sustained by the gradual erosion of critical perceptual capacity, with important implications for the design of educational, parental, and platform-level interventions.",
+        keywords: ["Harmful memes", "Adolescent bullying", "Discrimination recognition ability", "Group subjective norm", "Desensitization"]
+      },
+      { id: "icwsm-2026", year: "2026", title: "The Digital Landscape of God: Narrative, Visuals and Viewer Engagement of Religious Videos on YouTube", authors: "Rongyi Chen, Ziyan Xin, Qing Xiao, Ruiwei Xiao, Jingjia Xiao, Bingbing Zhang, Hong Shen, Zhicong Lu", venue: "Proceedings of the 20th International AAAI Conference on Web and Social Media", doi: "https://ojs.aaai.org/index.php/ICWSM/article/view/42649", selected: true, selectedDate: "2026-03-16", selectedVenue: "Proceedings of the 20th International AAAI Conference on Web and Social Media (ICWSM 2026)" },
+      { id: "ijhci-2025", year: "2025", title: "Enhancing Trust or Fostering Misjudgment? Assessing the Impact of Emerging Geographic Information Displays on Social Media Users' Information Trust", authors: "Yalong Xiao, Rongyi Chen, Qing Xiao, Chengzhang Zhu, Jie Feng", venue: "International Journal of Human–Computer Interaction", doi: "https://doi.org/10.1080/10447318.2025.2524493", selected: true, selectedDate: "2025-06-20" },
+      { id: "cultural-trends-2025", year: "2025", title: "Artists and Their Poor: Economic and Symbolic Inequality in Distorted China's Post-pandemic Art Subsidy Policies", authors: "Jingjia Xiao, Qing Xiao, Rongyi Chen", venue: "Cultural Trends", doi: "https://doi.org/10.1080/09548963.2025.2557215", selected: true, selectedDate: "2025-09-10" },
+      { id: "vrst-2024", year: "2024", title: "Exploring Influencers' and Users' Experiences in Douyin's Virtual Reality Live-Streaming", authors: "Rongyi Chen, Jingjia Xiao, Zilu Wang, Menghan Yin, Xianzhe Fan, Zihe Ran, Qing Xiao", venue: "Proceedings of the 30th ACM Symposium on Virtual Reality Software and Technology (VRST 2024)", doi: "https://doi.org/10.1145/3641825.3689519", selected: true, selectedDate: "2024-10-01" },
       { year: "2024", title: "The Power of the Civilian Hero: Effective Strategies for Local Media Coverage in Response to Information Epidemics", authors: "Chuchu Zhao, Rongyi Chen*", venue: "Local journalism, global challenges: News deserts, infodemic and the vastness in between; LabCom Books", doi: "https://ecrea.eu/page-18206/13312675" },
       { year: "2024", title: "Migrant Youth Aged 16 to 19 During Social Crises: Stress, Deviant Behavior, and Identification with Mainstream Society", authors: "Hua Zhong, Qing Xiao, Rongyi Chen, Jingjia Xiao", venue: "Huxiang Law Review", doi: "https://mp.weixin.qq.com/s/fjACER5Um7StLb4HSPKXpA" }
     ],
@@ -110,6 +118,29 @@ const AcademicProfile = () => {
       { year: "2023", title: "Focus on Supporting Roles in TikTok's Live-Streaming E-Commerce: How Do Assistant Anchors Affect Audiences' Purchase Intention?", authors: "Rongyi Chen, Shike Lin, Huiying Zhang", venue: "TikTok Creators and Digital Economies Symposium 2023", location: "London, UK" },
       { year: "2023", title: "Distorted Emotional Labor: An Ethnography of a Commercial Live-Streaming Assistant Anchor Group", authors: "Rongyi Chen, Shike Lin", venue: "2023 International Association for Media and Communication Research (IAMCR) Annual Conferencee", location: "Lyon, France" }
     ]
+  };
+
+  const selectedPublications = [
+    ...researchData.preprints,
+    ...researchData.publications
+  ]
+    .filter((publication) => publication.selected)
+    .map((publication) => ({
+      ...publication,
+      displayYear: publication.selectedYear || publication.year,
+      displayVenue: publication.selectedVenue || publication.venue,
+      url: publication.doi || publication.link
+    }))
+    .sort((a, b) =>
+      Number(b.displayYear) - Number(a.displayYear) ||
+      (b.selectedDate || '').localeCompare(a.selectedDate || '')
+    );
+
+  const toggleAbstract = (publicationId) => {
+    setExpandedAbstracts((current) => ({
+      ...current,
+      [publicationId]: !current[publicationId]
+    }));
   };
 
   // 搜索功能：仅搜索论文标题
@@ -872,115 +903,86 @@ const AcademicProfile = () => {
                   </div>
 
                   {!showFullPublications ? (
-                    /* Selected Publications - 使用Featured Research格式 */
+                    /* Selected Publications - generated from researchData */
                     <div className="space-y-6">
-                      {/* 最新CHB论文 */}
-                      <div className="bg-white p-6 border border-gray-200 shadow-sm">
-                        <div className="flex items-start gap-4">
-                          <div className="flex-shrink-0 w-16 text-center">
-                            <span className="inline-block px-2 py-1 bg-primary-600 text-white text-sm font-medium">
-                              2026
-                            </span>
-                          </div>
-                          <div className="flex-1">
-                            <div className="mb-2">
-                              <h4 className="text-lg font-semibold text-gray-800 mb-2">
-                                <a href="https://doi.org/10.1016/j.chb.2026.109126" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">
-                                  When Social Media Memes Become Mean to Peers: Discrimination Recognition and Group Norms in Adolescent Bullying
-                                </a>
-                              </h4>
-                              <div className="flex items-center gap-2">
-                                <span className="text-sm bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded-full">
-                                  🏆 Second Place Faculty Paper Award, Mass Communication and Society Division, AEJMC 2025
+                      {selectedPublications.map((publication) => {
+                        const abstractPanelId = `abstract-${publication.id}`;
+                        const isAbstractExpanded = Boolean(expandedAbstracts[publication.id]);
+
+                        return (
+                          <div key={publication.id} className="bg-white p-6 border border-gray-200 shadow-sm">
+                            <div className="flex items-start gap-4">
+                              <div className="flex-shrink-0 w-16 text-center">
+                                <span className="inline-block px-2 py-1 bg-primary-600 text-white text-sm font-medium">
+                                  {publication.displayYear}
                                 </span>
                               </div>
-                            </div>
-                            <p className="text-sm text-gray-600 mb-2">{highlightAuthor(formatAuthors('Rongyi Chen, Qing Xiao, Shike Lin, Menghan Yin, Jingjia Xiao, Hua Zhong, Bingbing Zhang'), 'Rongyi Chen')}</p>
-                            <p className="text-sm text-gray-500 italic">Computers in Human Behavior</p>
-                          </div>
-                        </div>
-                      </div>
+                              <div className="flex-1 min-w-0">
+                                <h4 className="text-lg font-semibold text-gray-800 mb-2">
+                                  <a href={publication.url} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">
+                                    {publication.title}
+                                  </a>
+                                </h4>
+                                <p className="text-sm text-gray-600 mb-2">
+                                  {highlightAuthor(formatAuthors(publication.authors), 'Rongyi Chen')}
+                                </p>
+                                <p className="text-sm text-gray-500 italic">{publication.displayVenue}</p>
 
-                      {/* 最新ICWSM论文 */}
-                      <div className="bg-white p-6 border border-gray-200 shadow-sm">
-                        <div className="flex items-start gap-4">
-                          <div className="flex-shrink-0 w-16 text-center">
-                            <span className="inline-block px-2 py-1 bg-primary-600 text-white text-sm font-medium">
-                              2026
-                            </span>
-                          </div>
-                          <div className="flex-1">
-                            <h4 className="text-lg font-semibold text-gray-800 mb-2">
-                              <a href="https://ojs.aaai.org/index.php/ICWSM/article/view/42649" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">
-                                The Digital Landscape of God: Narrative, Visuals and Viewer Engagement of Religious Videos on YouTube
-                              </a>
-                            </h4>
-                            <p className="text-sm text-gray-600 mb-2">{highlightAuthor(formatAuthors('Rongyi Chen, Ziyan Xin, Qing Xiao, Ruiwei Xiao, Jingjia Xiao, Bingbing Zhang, Hong Shen, Zhicong Lu'), 'Rongyi Chen')}</p>
-                            <p className="text-sm text-gray-500 italic">Proceedings of the 20th International AAAI Conference on Web and Social Media (ICWSM 2026)</p>
-                          </div>
-                        </div>
-                      </div>
+                                {publication.award && (
+                                  <span className="inline-block text-sm bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded-full mt-3">
+                                    🏆 {publication.award}
+                                  </span>
+                                )}
 
-                      {/* 最新CSCW论文 */}
-                      <div className="bg-white p-6 border border-gray-200 shadow-sm">
-                        <div className="flex items-start gap-4">
-                          <div className="flex-shrink-0 w-16 text-center">
-                            <span className="inline-block px-2 py-1 bg-primary-600 text-white text-sm font-medium">
-                              2026
-                            </span>
-                          </div>
-                          <div className="flex-1">
-                            <h4 className="text-lg font-semibold text-gray-800 mb-2">
-                              <a href="https://arxiv.org/abs/2505.20623" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">
-                                Constructing Algorithmic Authority: How Multi-Channel Networks (MCNs) Govern Live-Streaming Labor in China
-                              </a>
-                            </h4>
-                            <p className="text-sm text-gray-600 mb-2">{highlightAuthor(formatAuthors('Qing Xiao, Rongyi Chen, Jingjia Xiao, Tianyang Fu, Alice Qian Zhang, Xianzhe Fan, Bingbing Zhang, Zhicong Lu, Hong Shen'), 'Rongyi Chen')}</p>
-                            <p className="text-sm text-gray-500 italic">Proceedings of the ACM on Human-Computer Interaction, CSCW (CSCW’26)</p>
-                          </div>
-                        </div>
-                      </div>
+                                {publication.abstract && (
+                                  <div className="mt-4 border-t border-gray-100 pt-4">
+                                    <button
+                                      type="button"
+                                      onClick={() => toggleAbstract(publication.id)}
+                                      className="inline-flex items-center gap-2 text-sm font-medium text-primary-600 hover:text-primary-800 transition-colors"
+                                      aria-expanded={isAbstractExpanded}
+                                      aria-controls={abstractPanelId}
+                                    >
+                                      {isAbstractExpanded ? 'Hide Abstract' : 'View Abstract'}
+                                      <ChevronDown size={17} className={`transition-transform ${isAbstractExpanded ? 'rotate-180' : ''}`} />
+                                    </button>
 
-                      {/* 原有精选论文 */}
-                      {featuredResearch.map((item, i) => (
-                        <div key={i} className="bg-white p-6 border border-gray-200 shadow-sm">
-                          <div className="flex items-start gap-4">
-                            <div className="flex-shrink-0 w-16 text-center">
-                              <span className="inline-block px-2 py-1 bg-primary-600 text-white text-sm font-medium">
-                                {item.year}
-                              </span>
-                            </div>
-                            <div className="flex-1">
-                              <h4 className="text-lg font-semibold text-gray-800 mb-2">
-                                <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">
-                                  {item.title}
-                                </a>
-                              </h4>
-                              <p className="text-sm text-gray-600 mb-2">{highlightAuthor(formatAuthors(item.authors), 'Rongyi Chen')}</p>
-                              <p className="text-sm text-gray-500 italic">{item.venue}</p>
+                                    <AnimatePresence initial={false}>
+                                      {isAbstractExpanded && (
+                                        <motion.div
+                                          id={abstractPanelId}
+                                          initial={{ height: 0, opacity: 0 }}
+                                          animate={{ height: 'auto', opacity: 1 }}
+                                          exit={{ height: 0, opacity: 0 }}
+                                          transition={{ duration: 0.25 }}
+                                          className="overflow-hidden"
+                                        >
+                                          <div className="mt-4 rounded-md bg-primary-50 border border-primary-100 p-4">
+                                            <h5 className="text-sm font-semibold uppercase tracking-wide text-primary-700 mb-2">Abstract</h5>
+                                            <p className="text-sm text-gray-700 leading-relaxed">{publication.abstract}</p>
+                                            {publication.keywords?.length > 0 && (
+                                              <div className="mt-4">
+                                                <h5 className="text-sm font-semibold uppercase tracking-wide text-primary-700 mb-2">Keywords</h5>
+                                                <div className="flex flex-wrap gap-2">
+                                                  {publication.keywords.map((keyword) => (
+                                                    <span key={keyword} className="text-xs text-primary-700 bg-white border border-primary-200 px-2.5 py-1 rounded-full">
+                                                      {keyword}
+                                                    </span>
+                                                  ))}
+                                                </div>
+                                              </div>
+                                            )}
+                                          </div>
+                                        </motion.div>
+                                      )}
+                                    </AnimatePresence>
+                                  </div>
+                                )}
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      ))}
-
-                      <div className="bg-white p-6 border border-gray-200 shadow-sm">
-                        <div className="flex items-start gap-4">
-                          <div className="flex-shrink-0 w-16 text-center">
-                            <span className="inline-block px-2 py-1 bg-primary-600 text-white text-sm font-medium">
-                              2024
-                            </span>
-                          </div>
-                          <div className="flex-1">
-                            <h4 className="text-lg font-semibold text-gray-800 mb-2">
-                              <a href="https://doi.org/10.1145/3641825.3689519" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">
-                                Exploring Influencers' and Users' Experiences in Douyin's Virtual Reality Live-Streaming
-                              </a>
-                            </h4>
-                            <p className="text-sm text-gray-600 mb-2">{highlightAuthor(formatAuthors('Rongyi Chen, Jingjia Xiao, Zilu Wang, Menghan Yin, Xianzhe Fan, Zihe Ran, Qing Xiao'), 'Rongyi Chen')}</p>
-                            <p className="text-sm text-gray-500 italic">Proceedings of the 30th ACM Symposium on Virtual Reality Software and Technology (VRST 2024)</p>
-                          </div>
-                        </div>
-                      </div>
+                        );
+                      })}
 
                     </div>
                   ) : (
