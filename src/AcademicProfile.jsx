@@ -24,10 +24,10 @@ const AcademicProfile = () => {
 
   const profile = {
     name: "Rongyi Chen",
-    title: "M.A. Student in Computational Communication",
-    university: "Central South University",
-    email: "rongyi@csu.edu.cn",
-    nextStep: "Incoming Ph.D. Student at Peking University (2026 Fall)",
+    title: "Ph.D. Student in Communication (Big Data and AI Marketing Communication)",
+    university: "Peking University",
+    email: "rongyi_chen@163.com",
+    nextStep: "School of Journalism and Communication",
     bio: "My research spans communication technology, human-computer interaction (HCI), computer-supported cooperative work (CSCW), and social computing. I am particularly interested in how sociotechnical systems—including generative artificial intelligence, algorithms, virtual reality, and digital platforms—reshape media industries and everyday communication, as well as how emerging technologies are embedded in professional product workflows and the derivative impacts of technological change. My work seeks to integrate technological and communication research to understand information diffusion, user emotion, interface design, and human-computer interaction patterns in collaborative systems. I employ an interdisciplinary approach that combines ethnographic fieldwork, experimental design, and computational analysis to investigate not only how people make sense of these technologies, but also how these insights can inform the design of future human-AI collaborative system products.",
     researchAreas: ["Communication Technology", "Human-Computer Interaction", "Social Computing", "Computer-Supported Cooperative Work"]
   };
@@ -53,12 +53,14 @@ const AcademicProfile = () => {
   ];
 
   const recentPublications = [
+    { title: "When Social Media Memes Become Mean to Peers: Discrimination Recognition and Group Norms in Adolescent Bullying", authors: "Rongyi Chen, Qing Xiao, Shike Lin, et al.", venue: "Computers in Human Behavior", link: "https://doi.org/10.1016/j.chb.2026.109126" },
     { title: "Constructing Algorithmic Authority: How Multi-Channel Networks (MCNs) Govern Live-Streaming Labor in China", authors: "Qing Xiao, Rongyi Chen, Jingjia Xiao, et al.", venue: "Proceedings of the ACM on Human-Computer Interaction, CSCW (CSCW’26)", link: "https://arxiv.org/abs/2505.20623" },
     { title: "The Digital Landscape of God: Narrative, Visuals and Viewer Engagement of Religious Videos on YouTube", authors: "Rongyi Chen, Ziyan Xin, Qing Xiao, et al.", venue: "Proceedings of the 20th International AAAI Conference on Web and Social Media (ICWSM 2026)", link: "https://ojs.aaai.org/index.php/ICWSM/article/view/42649" },
     { title: "Enhancing Trust or Fostering Misjudgment? Assessing the Impact of Emerging Geographic Information Displays on Social Media Users' Information Trust", authors: "Yalong Xiao, Rongyi Chen, Qing Xiao, et al.", venue: "International Journal of Human–Computer Interaction (IJHCI)", link: "https://doi.org/10.1080/10447318.2025.2524493" }
   ];
 
   const recentNews = [
+    { date: "Jul 2026", title: "Paper Published in Computers in Human Behavior", content: "Published first-authored paper 'When Social Media Memes Become Mean to Peers' in Computers in Human Behavior." },
     { date: "May 2026", title: "Named Hunan Outstanding Graduate Student", content: "Received the Hunan Province Outstanding Graduate Student honor on May 29, 2026." },
     { date: "Mar 2026", title: "Paper Accepted by CSCW 2026", content: "Paper 'Constructing Algorithmic Authority' accepted to The 29th ACM Conference on Computer-Supported Cooperative Work and Social Computing." },
     { date: "Mar 2026", title: "Paper Accepted by ICWSM 2026", content: "Paper 'The Digital Landscape of God' accepted to The 20th International AAAI Conference on Web and Social Media." }
@@ -86,6 +88,7 @@ const AcademicProfile = () => {
       { year: "2025", title: "Constructing Algorithmic Authority: How Multi-Channel Networks (MCNs) Govern Live-Streaming Labor in China", authors: "Qing Xiao, Rongyi Chen, Jingjia Xiao, Tianyang Fu, Alice Qian Zhang, Xianzhe Fan, Bingbing Zhang, Zhicong Lu, Hong Shen", venue: "arXiv", link: "https://arxiv.org/abs/2505.20623" }
     ],
     publications: [
+      { year: "2026", title: "When Social Media Memes Become Mean to Peers: Discrimination Recognition and Group Norms in Adolescent Bullying", authors: "Rongyi Chen, Qing Xiao, Shike Lin, Menghan Yin, Jingjia Xiao, Hua Zhong, Bingbing Zhang", venue: "Computers in Human Behavior", doi: "https://doi.org/10.1016/j.chb.2026.109126", award: "Second Place Faculty Paper Award, Mass Communication and Society Division, AEJMC 2025" },
       { year: "2026", title: "The Digital Landscape of God: Narrative, Visuals and Viewer Engagement of Religious Videos on YouTube", authors: "Rongyi Chen, Ziyan Xin, Qing Xiao, Ruiwei Xiao, Jingjia Xiao, Bingbing Zhang, Hong Shen, Zhicong Lu", venue: "Proceedings of the 20th International AAAI Conference on Web and Social Media", doi: "https://ojs.aaai.org/index.php/ICWSM/article/view/42649" },
       { year: "2025", title: "Enhancing Trust or Fostering Misjudgment? Assessing the Impact of Emerging Geographic Information Displays on Social Media Users' Information Trust", authors: "Yalong Xiao, Rongyi Chen, Qing Xiao, Chengzhang Zhu, Jie Feng", venue: "International Journal of Human–Computer Interaction", doi: "https://doi.org/10.1080/10447318.2025.2524493" },
       { year: "2025", title: "Artists and Their Poor: Economic and Symbolic Inequality in Distorted China's Post-pandemic Art Subsidy Policies", authors: "Jingjia Xiao, Qing Xiao, Rongyi Chen", venue: "Cultural Trends", doi: "https://doi.org/10.1080/09548963.2025.2557215" },
@@ -94,7 +97,7 @@ const AcademicProfile = () => {
       { year: "2024", title: "Migrant Youth Aged 16 to 19 During Social Crises: Stress, Deviant Behavior, and Identification with Mainstream Society", authors: "Hua Zhong, Qing Xiao, Rongyi Chen, Jingjia Xiao", venue: "Huxiang Law Review", doi: "https://mp.weixin.qq.com/s/fjACER5Um7StLb4HSPKXpA" }
     ],
     conferences: [
-      { year: "2025", title: "When Memes Become Mean: Discrimination Recognition and Group Norms in Adolescent Bullying", authors: "Rongyi Chen, Qing Xiao, Shike Lin, Menghan Yin, Jingjia Xiao, Hua Zhong, Bingbing Zhang", venue: "2025 Association for Education in Journalism and Mass Communication (AEJMC) 108th Annual Conference", location: "San Francisco, USA", award: "Second Place Faculty Paper Award, Mass Communication and Society Division" },
+      { year: "2025", title: "When Social Media Memes Become Mean to Peers: Discrimination Recognition and Group Norms in Adolescent Bullying", authors: "Rongyi Chen, Qing Xiao, Shike Lin, Menghan Yin, Jingjia Xiao, Hua Zhong, Bingbing Zhang", venue: "2025 Association for Education in Journalism and Mass Communication (AEJMC) 108th Annual Conference", location: "San Francisco, USA", award: "Second Place Faculty Paper Award, Mass Communication and Society Division" },
       { year: "2025", title: "Responsible LLMs in Persuasive Health Message: Comparing Language Biases in General LLMs and Healthcare LLMs", authors: "Rongyi Chen, Honghua Pan, Ni Yuan, Yalong Xiao, Jie Feng", venue: "2025 the 75th Annual Conference of the International Communication Association (ICA)", location: "Denver, USA" },
       { year: "2025", title: "The Artists and Their Poor: Economic Inequality in China's Post-Pandemic Art Subsidy Policies", authors: "Jingjia Xiao, Qing Xiao, Rongyi Chen", venue: "2025 the 75th Annual Conference of the International Communication Association (ICA)", location: "Denver, USA" },
       { year: "2025", title: "How AI Constructs Disaster Narratives: A Comparative Analysis of LLMs in Multimodal Disaster News Production", authors: "Rui Zhang, Rongyi Chen", venue: "2025 International Association for Media and Communication Research (IAMCR) Annual Conference", location: "Singapore" },
@@ -325,7 +328,7 @@ const AcademicProfile = () => {
       ].filter(p =>
         p.title === "The Digital Landscape of God: Narrative, Visuals and Viewer Engagement of Religious Videos on YouTube" ||
         p.title === "Constructing Algorithmic Authority: How Multi-Channel Networks (MCNs) Govern Live-Streaming Labor in China" ||
-        p.title === "When Memes Become Mean: Discrimination Recognition and Group Norms in Adolescent Bullying" ||
+        (p.title === "When Social Media Memes Become Mean to Peers: Discrimination Recognition and Group Norms in Adolescent Bullying" && p.venue === "Computers in Human Behavior") ||
         p.title === "Responsible LLMs in Persuasive Health Message: Comparing Language Biases in General LLMs and Healthcare LLMs" ||
         p.title === "How AI Constructs Disaster Narratives: A Comparative Analysis of LLMs in Multimodal Disaster News Production" ||
         p.title === "An Emerging Platform Entertainment Model in China: Algorithms Regulation and the Composite Interaction of Live Streaming and Short Videos"
@@ -350,6 +353,7 @@ const AcademicProfile = () => {
 
   const newsData = {
     academic: [
+      { date: "2026-07-16", title: "📄 Paper Published in Computers in Human Behavior!", content: "Published first-authored paper 'When Social Media Memes Become Mean to Peers: Discrimination Recognition and Group Norms in Adolescent Bullying' in Computers in Human Behavior." },
       { date: "2026-05-29", title: "🏆 Named Hunan Outstanding Graduate Student!", content: "Received the Hunan Province Outstanding Graduate Student honor." },
       { date: "2026-03-18", title: "🎉 Paper Accepted by CSCW 2026!", content: "Paper 'Constructing Algorithmic Authority: How Multi-Channel Networks (MCNs) Govern Live-Streaming Labor in China' accepted to The 29th ACM Conference on Computer-Supported Cooperative Work and Social Computing (CSCW 2026)." },
       { date: "2026-03-16", title: "🎉 Paper Accepted by ICWSM 2026!", content: "Paper 'The Digital Landscape of God: Narrative, Visuals and Viewer Engagement of Religious Videos on YouTube' accepted to The 20th International AAAI Conference on Web and Social Media (ICWSM 2026)." },
@@ -656,6 +660,13 @@ const AcademicProfile = () => {
                     <h3 className="text-xl font-semibold text-gray-800 mb-4">Education</h3>
                     <div className="space-y-4">
                       <div className="border-l-4 border-primary-300 pl-4 py-1">
+                        <p className="font-semibold text-gray-800">Peking University</p>
+                        <p className="text-primary-600">2026-Present</p>
+                        <p className="text-gray-600">Ph.D. in Communication</p>
+                        <p className="text-gray-500">Research Area: Big Data and AI Marketing Communication</p>
+                        <p className="text-gray-500">School of Journalism and Communication</p>
+                      </div>
+                      <div className="border-l-4 border-primary-300 pl-4 py-1">
                         <p className="font-semibold text-gray-800">Central South University</p>
                         <p className="text-primary-600">2023-2026</p>
                         <p className="text-gray-600">M.A. in Computational Communication</p>
@@ -946,24 +957,24 @@ const AcademicProfile = () => {
                         <div className="flex items-start gap-4">
                           <div className="flex-shrink-0 w-16 text-center">
                             <span className="inline-block px-2 py-1 bg-primary-600 text-white text-sm font-medium">
-                              2025
+                              2026
                             </span>
                           </div>
                           <div className="flex-1">
                             <div className="mb-2">
                               <h4 className="text-lg font-semibold text-gray-800 mb-2">
-                                <span className="text-primary-600">
-                                  When Memes Become Mean: Discrimination Recognition and Group Norms in Adolescent Bullying
-                                </span>
+                                <a href="https://doi.org/10.1016/j.chb.2026.109126" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">
+                                  When Social Media Memes Become Mean to Peers: Discrimination Recognition and Group Norms in Adolescent Bullying
+                                </a>
                               </h4>
                               <div className="flex items-center gap-2">
                                 <span className="text-sm bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded-full">
-                                  🏆 Second Place Faculty Paper Award, Mass Communication and Society Division
+                                  🏆 Second Place Faculty Paper Award, Mass Communication and Society Division, AEJMC 2025
                                 </span>
                               </div>
                             </div>
                             <p className="text-sm text-gray-600 mb-2">{highlightAuthor(formatAuthors('Rongyi Chen, Qing Xiao, Shike Lin, Menghan Yin, Jingjia Xiao, Hua Zhong, Bingbing Zhang'), 'Rongyi Chen')}</p>
-                            <p className="text-sm text-gray-500 italic">2025 Association for Education in Journalism and Mass Communication (AEJMC) 108th Annual Conference</p>
+                            <p className="text-sm text-gray-500 italic">Computers in Human Behavior</p>
                           </div>
                         </div>
                       </div>
@@ -1028,6 +1039,11 @@ const AcademicProfile = () => {
                                   <p className="text-sm text-gray-600 mt-1">
                                     {highlightAuthor(formatAuthors(p.authors), 'Rongyi Chen')}
                                   </p>
+                                  {p.award && (
+                                    <span className="inline-block text-sm bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded-full mt-2">
+                                      🏆 {p.award}
+                                    </span>
+                                  )}
                                 </div>
                                 <a
                                   href={p.doi}
@@ -1098,8 +1114,8 @@ const AcademicProfile = () => {
                         <span className="text-4xl">🎉</span>
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold mb-2">Latest Updates March 2026</h3>
-                        <p className="text-primary-100">Two papers accepted by CSCW 2026 and ICWSM 2026, and received Ph.D. admission offer from Peking University!</p>
+                        <h3 className="text-xl font-bold mb-2">Latest Updates July 2026</h3>
+                        <p className="text-primary-100">New paper published in Computers in Human Behavior, and now a Ph.D. student at Peking University!</p>
                       </div>
                     </div>
                   </div>
@@ -1162,12 +1178,19 @@ const AcademicProfile = () => {
                       <div>
                         <h3 className="text-xl font-semibold text-gray-800 mb-4">Rongyi Chen</h3>
                         <div className="space-y-2 text-gray-600 text-lg">
-                          <p>Center for Intelligent Media & Communication Research</p>
-                          <p>Central South University, Office 409, Second Teaching Building</p>
-                          <p>932 Lushan South Road, Yuelu District</p>
-                          <p>Changsha, Hunan 410083, P.R. China</p>
+                          <p>School of Journalism and Communication</p>
+                          <p>Peking University</p>
+                          <p>No. 5 Yiheyuan Road, Haidian District</p>
+                          <p>Beijing, China</p>
+                          <p>Postal Code: 100871</p>
                         </div>
                         <div className="mt-8 space-y-3 text-gray-700">
+                          <p className="text-lg">
+                            <span className="font-medium">Tel:</span>{" "}
+                            <a href="tel:+861062754683" className="text-primary-600 hover:underline">
+                              +86-10-62754683
+                            </a>
+                          </p>
                           <p className="text-lg">
                             <span className="font-medium">Email:</span>{" "}
                             <a href={`mailto:${profile.email}`} className="text-primary-600 hover:underline">
@@ -1180,14 +1203,14 @@ const AcademicProfile = () => {
                       {/* 右侧地图 */}
                       <div className="border border-gray-200 h-[400px] overflow-hidden rounded">
                         <iframe
-                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3062.807389764504!2d112.93636631526064!3d28.17903898258087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x343bb994a8a701c3%3A0x5a1207482d020f6!2sCentral%20South%20University!5e0!3m2!1sen!2sus!4v1649000000000!5m2!1sen!2sus"
+                          src="https://www.google.com/maps?q=School+of+Journalism+and+Communication,+Peking+University,+Beijing&output=embed"
                           width="100%"
                           height="100%"
                           style={{ border: 0 }}
                           allowFullScreen=""
                           loading="lazy"
                           referrerPolicy="no-referrer-when-downgrade"
-                          title="Central South University Location"
+                          title="School of Journalism and Communication, Peking University Location"
                         ></iframe>
                       </div>
                     </div>
