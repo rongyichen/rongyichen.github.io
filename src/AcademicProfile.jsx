@@ -30,7 +30,7 @@ const AcademicProfile = () => {
     title: "Ph.D. Student in Communication (Big Data and AI Marketing Communication)",
     university: "Peking University",
     email: "rongyi_chen@163.com",
-    nextStep: "School of Journalism and Communication",
+    nextStep: "School of Journalism & Communication",
     bio: "My research spans communication technology, human-computer interaction (HCI), computer-supported cooperative work (CSCW), and social computing. I am particularly interested in how sociotechnical systems—including generative artificial intelligence, algorithms, virtual reality, and digital platforms—reshape media industries and everyday communication, as well as how emerging technologies are embedded in professional product workflows and the derivative impacts of technological change. My work seeks to integrate technological and communication research to understand information diffusion, user emotion, interface design, and human-computer interaction patterns in collaborative systems. I employ an interdisciplinary approach that combines ethnographic fieldwork, experimental design, and computational analysis to investigate not only how people make sense of these technologies, but also how these insights can inform the design of future human-AI collaborative system products.",
     researchAreas: ["Communication Technology", "Human-Computer Interaction", "Social Computing", "Computer-Supported Cooperative Work"]
   };
@@ -83,7 +83,20 @@ const AcademicProfile = () => {
 
   const researchData = {
     preprints: [
-      { id: "cscw-2026", year: "2025", title: "Constructing Algorithmic Authority: How Multi-Channel Networks (MCNs) Govern Live-Streaming Labor in China", authors: "Qing Xiao, Rongyi Chen, Jingjia Xiao, Tianyang Fu, Alice Qian Zhang, Xianzhe Fan, Bingbing Zhang, Zhicong Lu, Hong Shen", venue: "arXiv", link: "https://arxiv.org/abs/2505.20623", selected: true, selectedDate: "2026-03-18", selectedYear: "2026", selectedVenue: "Proceedings of the ACM on Human-Computer Interaction, CSCW (CSCW’26)" }
+      {
+        id: "cscw-2026",
+        year: "2025",
+        title: "Constructing Algorithmic Authority: How Multi-Channel Networks (MCNs) Govern Live-Streaming Labor in China",
+        authors: "Qing Xiao, Rongyi Chen, Jingjia Xiao, Tianyang Fu, Alice Qian Zhang, Xianzhe Fan, Bingbing Zhang, Zhicong Lu, Hong Shen",
+        venue: "arXiv",
+        link: "https://arxiv.org/abs/2505.20623",
+        selected: true,
+        selectedDate: "2026-03-18",
+        selectedYear: "2026",
+        selectedVenue: "Proceedings of the ACM on Human-Computer Interaction, CSCW (CSCW’26)",
+        abstract: "This study examines the discursive construction of algorithms and its role in labor management in Chinese live-streaming industry by focusing on how intermediary organizations (Multi-Channel Networks, MCNs) actively construct, stabilize, and deploy particular interpretations of platform algorithms as instruments of labor management. Drawing on a nine-month ethnographic fieldwork and 44 interviews with live-streamers, former live-streamers, and MCN staff, we examine how MCNs produce and circulate structured interpretations of platform algorithms across organizational settings. We show that MCNs articulate two asymmetric yet interconnected forms of algorithmic interpretations. Internally, MCNs managers approach algorithms as volatile and uncertain systems and adopt probabilistic strategies to manage performance and risk. Externally, in interactions with streamers, MCNs circulate simplified and prescriptive algorithmic narratives that frame platform systems as transparent, fair, and responsive to individual effort. These organizationally produced algorithmic interpretations are embedded into training materials, live-streaming performance metrics, and everyday management practices. Through these mechanisms, streamers internalize responsibility for outcomes, intensify self-discipline, and increase investments in equipment, performing skills, and routines to maintain streamer-audience relationship, while accountability for unpredictable outcomes is increasingly shifted away from managers and platforms. This study contributes to CSCW and platform labor research by demonstrating how discursively constructed algorithmic knowledge can function as an intermediary infrastructure of soft control, shaping how platform labor is regulated, moralized, and governed in practice.",
+        keywords: ["Algorithm", "Platform", "Discursive Construction of Algorithms", "Live-streaming", "Multi-Channel Networks (MCNs)", "China", "Ethnography"]
+      }
     ],
     publications: [
       {
@@ -99,9 +112,44 @@ const AcademicProfile = () => {
         abstract: "The widespread circulation of harmful memes on social media is increasingly recognized as a contributor to adolescent aggression, yet the mechanisms linking meme engagement to bullying behavior remain underexplored. Drawing on a neo-ecological framework that distinguishes physical and virtual microsystems, this study surveyed 1,319 Chinese middle school students to examine how harmful meme culture is transmitted within adolescent communities and translated into bullying. Using structural equation modeling, we identified adolescents’ difficulty in recognizing discrimination as a key cognitive mediator linking harmful meme usage to bullying behavior. Peer-group subjective norms emerged as the strongest factor in cultural transmission, while parental opposition and restricted media access appeared insufficient and showed no protective association. This challenges the traditional focus on parental supervision and media use, highlighting the prominent role of harmful meme culture within adolescent peer groups. These findings reframe adolescent bullying as a culturally mediated phenomenon shaped by peer normalization processes and sustained by the gradual erosion of critical perceptual capacity, with important implications for the design of educational, parental, and platform-level interventions.",
         keywords: ["Harmful memes", "Adolescent bullying", "Discrimination recognition ability", "Group subjective norm", "Desensitization"]
       },
-      { id: "icwsm-2026", year: "2026", title: "The Digital Landscape of God: Narrative, Visuals and Viewer Engagement of Religious Videos on YouTube", authors: "Rongyi Chen, Ziyan Xin, Qing Xiao, Ruiwei Xiao, Jingjia Xiao, Bingbing Zhang, Hong Shen, Zhicong Lu", venue: "Proceedings of the 20th International AAAI Conference on Web and Social Media", doi: "https://ojs.aaai.org/index.php/ICWSM/article/view/42649", selected: true, selectedDate: "2026-03-16", selectedVenue: "Proceedings of the 20th International AAAI Conference on Web and Social Media (ICWSM 2026)" },
-      { id: "ijhci-2025", year: "2025", title: "Enhancing Trust or Fostering Misjudgment? Assessing the Impact of Emerging Geographic Information Displays on Social Media Users' Information Trust", authors: "Yalong Xiao, Rongyi Chen, Qing Xiao, Chengzhang Zhu, Jie Feng", venue: "International Journal of Human–Computer Interaction", doi: "https://doi.org/10.1080/10447318.2025.2524493", selected: true, selectedDate: "2025-06-20" },
-      { id: "cultural-trends-2025", year: "2025", title: "Artists and Their Poor: Economic and Symbolic Inequality in Distorted China's Post-pandemic Art Subsidy Policies", authors: "Jingjia Xiao, Qing Xiao, Rongyi Chen", venue: "Cultural Trends", doi: "https://doi.org/10.1080/09548963.2025.2557215", selected: true, selectedDate: "2025-09-10" },
+      {
+        id: "icwsm-2026",
+        year: "2026",
+        title: "The Digital Landscape of God: Narrative, Visuals and Viewer Engagement of Religious Videos on YouTube",
+        authors: "Rongyi Chen, Ziyan Xin, Qing Xiao, Ruiwei Xiao, Jingjia Xiao, Bingbing Zhang, Hong Shen, Zhicong Lu",
+        venue: "Proceedings of the 20th International AAAI Conference on Web and Social Media",
+        doi: "https://ojs.aaai.org/index.php/ICWSM/article/view/42649",
+        selected: true,
+        selectedDate: "2026-03-16",
+        selectedVenue: "Proceedings of the 20th International AAAI Conference on Web and Social Media (ICWSM 2026)",
+        abstract: "The digital transformation of religious practice has reshaped how billions of people engage with spiritual content, with video-sharing platforms becoming central to contemporary religious communication. Yet current research lacks systematic understanding of how narrative and visual elements create meaningful spiritual experiences and foster viewer engagement. We present a mixed-methods study of popular religious videos on YouTube across major religions, developing taxonomies of narrative frameworks, visual elements, and viewer interaction. Using LLM-assisted analysis, we studied relationships between content characteristics and viewer responses. Findings shows religious videos predominantly adopt speaking-style formats with authority-based persuasion strategies, using salvation narratives for guidance. All prefer bright lighting, with Buddhism favoring warm tones and prominent symbols, Judaism preferring indoor settings, and Hinduism emphasizing sacred objects. We identified differentiated patterns of emotional sharing among religious viewers while revealing significant correlations between content characteristics and engagement, particularly regarding AI-generated content."
+      },
+      {
+        id: "ijhci-2025",
+        year: "2025",
+        title: "Enhancing Trust or Fostering Misjudgment? Assessing the Impact of Emerging Geographic Information Displays on Social Media Users' Information Trust",
+        authors: "Yalong Xiao, Rongyi Chen, Qing Xiao, Chengzhang Zhu, Jie Feng",
+        venue: "International Journal of Human–Computer Interaction",
+        doi: "https://doi.org/10.1080/10447318.2025.2524493",
+        selected: true,
+        selectedDate: "2025-06-20",
+        selectedOrder: 1,
+        abstract: "Recently, social media platforms like Weibo have introduced mandatory IP address displays to enhance information evaluation, but their effectiveness remains unclear. In this study, we conducted an online experiment with 722 participants to examine the effectiveness of mandatory IP address displays under different conditions (none, matched, unmatched, unknown) on social media. This study investigated how these conditions influence users’ trust in social media information and whether this process is moderated by users’ patterns of social media usage. Results showed that matched IPs increased trust, unmatched IPs reduced it, and unknown IP labels were perceived as neutral. Frequent social media use and active participation correlated with higher trust in the presented information, indicating susceptibility to misinformation. Trust in technology also amplified trust in social media information under unknown or mismatched IPs. These findings highlight risks in over-relying on social media features, emphasizing the need for careful design to counter misinformation.",
+        keywords: ["Social media", "geographic information display", "information trust", "human-computer interaction", "misinformation"]
+      },
+      {
+        id: "cultural-trends-2025",
+        year: "2025",
+        title: "Artists and Their Poor: Economic and Symbolic Inequality in Distorted China's Post-pandemic Art Subsidy Policies",
+        authors: "Jingjia Xiao, Qing Xiao, Rongyi Chen",
+        venue: "Cultural Trends",
+        doi: "https://doi.org/10.1080/09548963.2025.2557215",
+        selected: true,
+        selectedDate: "2025-09-10",
+        selectedOrder: 2,
+        abstract: "This study conducted a three-year longitudinal follow-up interview with 37 extras in the Hengdian World Studio in China from 2022 to 2024, examining the impact of post-pandemic cultural subsidy policies on their living conditions. We aim to highlight that these extras struggle between the identities of creative actors and underclass workers, enduring symbolic violence due to the identity distinction. Furthermore, we point out that the systemic inequalities stemming from this identity distinction prevent these groups from receiving adequate subsidies and accessing protests. Finally, we call for the democratization and inclusivity of the artist identity to deepen the discussion of Basic Income for Artists (BIA) policies.",
+        keywords: ["Cultural and creative industry", "actor", "extras", "Basic Income for Artists (BIA)", "Covid-19", "China"]
+      },
       { id: "vrst-2024", year: "2024", title: "Exploring Influencers' and Users' Experiences in Douyin's Virtual Reality Live-Streaming", authors: "Rongyi Chen, Jingjia Xiao, Zilu Wang, Menghan Yin, Xianzhe Fan, Zihe Ran, Qing Xiao", venue: "Proceedings of the 30th ACM Symposium on Virtual Reality Software and Technology (VRST 2024)", doi: "https://doi.org/10.1145/3641825.3689519", selected: true, selectedDate: "2024-10-01" },
       { year: "2024", title: "The Power of the Civilian Hero: Effective Strategies for Local Media Coverage in Response to Information Epidemics", authors: "Chuchu Zhao, Rongyi Chen*", venue: "Local journalism, global challenges: News deserts, infodemic and the vastness in between; LabCom Books", doi: "https://ecrea.eu/page-18206/13312675" },
       { year: "2024", title: "Migrant Youth Aged 16 to 19 During Social Crises: Stress, Deviant Behavior, and Identification with Mainstream Society", authors: "Hua Zhong, Qing Xiao, Rongyi Chen, Jingjia Xiao", venue: "Huxiang Law Review", doi: "https://mp.weixin.qq.com/s/fjACER5Um7StLb4HSPKXpA" }
@@ -133,6 +181,7 @@ const AcademicProfile = () => {
     }))
     .sort((a, b) =>
       Number(b.displayYear) - Number(a.displayYear) ||
+      (a.selectedOrder ?? Number.MAX_SAFE_INTEGER) - (b.selectedOrder ?? Number.MAX_SAFE_INTEGER) ||
       (b.selectedDate || '').localeCompare(a.selectedDate || '')
     );
 
@@ -390,7 +439,7 @@ const AcademicProfile = () => {
       { date: "2026-05-29", title: "🏆 Named Hunan Outstanding Graduate Student!", content: "Received the Hunan Province Outstanding Graduate Student honor." },
       { date: "2026-03-18", title: "🎉 Paper Accepted by CSCW 2026!", content: "Paper 'Constructing Algorithmic Authority: How Multi-Channel Networks (MCNs) Govern Live-Streaming Labor in China' accepted to The 29th ACM Conference on Computer-Supported Cooperative Work and Social Computing (CSCW 2026)." },
       { date: "2026-03-16", title: "🎉 Paper Accepted by ICWSM 2026!", content: "Paper 'The Digital Landscape of God: Narrative, Visuals and Viewer Engagement of Religious Videos on YouTube' accepted to The 20th International AAAI Conference on Web and Social Media (ICWSM 2026)." },
-      { date: "2025-12-24", title: "🎓 Admitted to Peking University Ph.D. Program!", content: "Received pre-admission to the Ph.D. program in Communication Studies at the School of Journalism and Communication, Peking University, focusing on Big Data & AI Marketing Communication. Starting September 2026." },
+      { date: "2025-12-24", title: "🎓 Admitted to Peking University Ph.D. Program!", content: "Received pre-admission to the Ph.D. program in Communication Studies at the School of Journalism & Communication, Peking University, focusing on Big Data & AI Marketing Communication. Starting September 2026." },
       { date: "2025-09-10", title: "📄 Paper Published in Cultural Trends!", content: "Published co-authored paper 'Artists and Their Poor: Economic and Symbolic Inequality in Distorted China's Post-Pandemic Art Subsidy Policies' in Cultural Trends." },
       { date: "2025-06-20", title: "🎉 Paper Accepted by IJHCI!", content: "Accepted co-authored paper 'Enhancing Trust or Fostering Misjudgment? Assessing the Impact of Emerging Geographic Information Displays on Social Media Users' Information Trust' to the International Journal of Human–Computer Interaction." },
       { date: "2025-05-20", title: "🏆 Received AEJMC Second Place Paper Award!", content: "Received Second Place Faculty Paper Award at the Mass Communication and Society Division, AEJMC 2025 108th Annual Conference. Presented at the MCS Top Refereed Research Paper Session as first author." },
@@ -431,9 +480,18 @@ const AcademicProfile = () => {
       {/* Header Section */}
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <h1 className="text-5xl font-light text-primary-600 mb-2">{profile.name}</h1>
-          <p className="text-xl text-gray-600">{profile.title}</p>
-          <p className="text-lg text-primary-500 mt-1">{profile.nextStep} | {profile.university}</p>
+          <div className="flex items-center justify-between gap-4 sm:gap-8">
+            <div className="min-w-0">
+              <h1 className="text-4xl sm:text-5xl font-light text-primary-600 mb-2">{profile.name}</h1>
+              <p className="text-base sm:text-xl text-gray-600 leading-snug">{profile.title}</p>
+              <p className="text-base sm:text-lg text-primary-500 mt-1 leading-snug">{profile.university} | {profile.nextStep}</p>
+            </div>
+            <img
+              src="/images/logos/peking.png"
+              alt="Peking University emblem"
+              className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain flex-shrink-0"
+            />
+          </div>
         </div>
       </header>
 
@@ -697,7 +755,7 @@ const AcademicProfile = () => {
                         <p className="text-primary-600">2026-Present</p>
                         <p className="text-gray-600">Ph.D. in Communication</p>
                         <p className="text-gray-500">Research Area: Big Data and AI Marketing Communication</p>
-                        <p className="text-gray-500">School of Journalism and Communication</p>
+                        <p className="text-gray-500">School of Journalism & Communication</p>
                       </div>
                       <div className="border-l-4 border-primary-300 pl-4 py-1">
                         <p className="font-semibold text-gray-800">Central South University</p>
@@ -939,12 +997,19 @@ const AcademicProfile = () => {
                                     <button
                                       type="button"
                                       onClick={() => toggleAbstract(publication.id)}
-                                      className="inline-flex items-center gap-2 text-sm font-medium text-primary-600 hover:text-primary-800 transition-colors"
+                                      className={`group w-full flex items-center justify-between gap-3 rounded-md border px-4 py-2.5 text-sm font-medium transition-colors ${
+                                        isAbstractExpanded
+                                          ? 'border-primary-200 bg-primary-50 text-primary-700'
+                                          : 'border-gray-200 bg-gray-50 text-gray-700 hover:border-primary-200 hover:bg-primary-50 hover:text-primary-700'
+                                      }`}
                                       aria-expanded={isAbstractExpanded}
                                       aria-controls={abstractPanelId}
                                     >
-                                      {isAbstractExpanded ? 'Hide Abstract' : 'View Abstract'}
-                                      <ChevronDown size={17} className={`transition-transform ${isAbstractExpanded ? 'rotate-180' : ''}`} />
+                                      <span className="inline-flex items-center gap-2">
+                                        <BookOpen size={16} />
+                                        {publication.keywords?.length ? 'Abstract & Keywords' : 'Abstract'}
+                                      </span>
+                                      <ChevronDown size={18} className={`flex-shrink-0 transition-transform duration-200 ${isAbstractExpanded ? 'rotate-180' : ''}`} />
                                     </button>
 
                                     <AnimatePresence initial={false}>
@@ -957,7 +1022,7 @@ const AcademicProfile = () => {
                                           transition={{ duration: 0.25 }}
                                           className="overflow-hidden"
                                         >
-                                          <div className="mt-4 rounded-md bg-primary-50 border border-primary-100 p-4">
+                                          <div className="mt-3 rounded-lg bg-gray-50 border border-gray-200 p-5">
                                             <h5 className="text-sm font-semibold uppercase tracking-wide text-primary-700 mb-2">Abstract</h5>
                                             <p className="text-sm text-gray-700 leading-relaxed">{publication.abstract}</p>
                                             {publication.keywords?.length > 0 && (
@@ -1206,7 +1271,7 @@ const AcademicProfile = () => {
                       <div>
                         <h3 className="text-xl font-semibold text-gray-800 mb-4">Rongyi Chen</h3>
                         <div className="space-y-2 text-gray-600 text-lg">
-                          <p>School of Journalism and Communication</p>
+                          <p>School of Journalism & Communication</p>
                           <p>Peking University</p>
                           <p>No. 5 Yiheyuan Road, Haidian District</p>
                           <p>Beijing, China</p>
@@ -1231,14 +1296,14 @@ const AcademicProfile = () => {
                       {/* 右侧地图 */}
                       <div className="border border-gray-200 h-[400px] overflow-hidden rounded">
                         <iframe
-                          src="https://www.google.com/maps?q=School+of+Journalism+and+Communication,+Peking+University,+Beijing&output=embed"
+                          src="https://www.google.com/maps?q=School+of+Journalism+%26+Communication,+Peking+University,+Beijing&output=embed"
                           width="100%"
                           height="100%"
                           style={{ border: 0 }}
                           allowFullScreen=""
                           loading="lazy"
                           referrerPolicy="no-referrer-when-downgrade"
-                          title="School of Journalism and Communication, Peking University Location"
+                          title="School of Journalism & Communication, Peking University Location"
                         ></iframe>
                       </div>
                     </div>
