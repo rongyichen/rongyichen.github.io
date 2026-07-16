@@ -150,7 +150,17 @@ const AcademicProfile = () => {
         abstract: "This study conducted a three-year longitudinal follow-up interview with 37 extras in the Hengdian World Studio in China from 2022 to 2024, examining the impact of post-pandemic cultural subsidy policies on their living conditions. We aim to highlight that these extras struggle between the identities of creative actors and underclass workers, enduring symbolic violence due to the identity distinction. Furthermore, we point out that the systemic inequalities stemming from this identity distinction prevent these groups from receiving adequate subsidies and accessing protests. Finally, we call for the democratization and inclusivity of the artist identity to deepen the discussion of Basic Income for Artists (BIA) policies.",
         keywords: ["Cultural and creative industry", "actor", "extras", "Basic Income for Artists (BIA)", "Covid-19", "China"]
       },
-      { id: "vrst-2024", year: "2024", title: "Exploring Influencers' and Users' Experiences in Douyin's Virtual Reality Live-Streaming", authors: "Rongyi Chen, Jingjia Xiao, Zilu Wang, Menghan Yin, Xianzhe Fan, Zihe Ran, Qing Xiao", venue: "Proceedings of the 30th ACM Symposium on Virtual Reality Software and Technology (VRST 2024)", doi: "https://doi.org/10.1145/3641825.3689519", selected: true, selectedDate: "2024-10-01" },
+      {
+        id: "vrst-2024",
+        year: "2024",
+        title: "Exploring Influencers' and Users' Experiences in Douyin's Virtual Reality Live-Streaming",
+        authors: "Rongyi Chen, Jingjia Xiao, Zilu Wang, Menghan Yin, Xianzhe Fan, Zihe Ran, Qing Xiao",
+        venue: "Proceedings of the 30th ACM Symposium on Virtual Reality Software and Technology (VRST 2024)",
+        doi: "https://doi.org/10.1145/3641825.3689519",
+        selected: true,
+        selectedDate: "2024-10-01",
+        abstract: "VR live-streaming has become an emerging part on Douyin. This study aims to explore the technical modes, content strategies, user experiences in Douyin‘s VR live-streaming. Through interviews and focus groups, we found that VR technology is recognized by influencers and has become an essential part of their creative practice. For some influencers, VR technology is a key factor in enhancing audience engagement and immersive experiences, although technical literacy barriers may arise when setting up VR scenes. We also provide dimensions for improving and developing user adoption and experience of VR technology in social media environments."
+      },
       { year: "2024", title: "The Power of the Civilian Hero: Effective Strategies for Local Media Coverage in Response to Information Epidemics", authors: "Chuchu Zhao, Rongyi Chen*", venue: "Local journalism, global challenges: News deserts, infodemic and the vastness in between; LabCom Books", doi: "https://ecrea.eu/page-18206/13312675" },
       { year: "2024", title: "Migrant Youth Aged 16 to 19 During Social Crises: Stress, Deviant Behavior, and Identification with Mainstream Society", authors: "Hua Zhong, Qing Xiao, Rongyi Chen, Jingjia Xiao", venue: "Huxiang Law Review", doi: "https://mp.weixin.qq.com/s/fjACER5Um7StLb4HSPKXpA" }
     ],
@@ -994,23 +1004,24 @@ const AcademicProfile = () => {
 
                                 {publication.abstract && (
                                   <div className="mt-4 border-t border-gray-100 pt-4">
-                                    <button
-                                      type="button"
-                                      onClick={() => toggleAbstract(publication.id)}
-                                      className={`group w-full flex items-center justify-between gap-3 rounded-md border px-4 py-2.5 text-sm font-medium transition-colors ${
-                                        isAbstractExpanded
-                                          ? 'border-primary-200 bg-primary-50 text-primary-700'
-                                          : 'border-gray-200 bg-gray-50 text-gray-700 hover:border-primary-200 hover:bg-primary-50 hover:text-primary-700'
-                                      }`}
-                                      aria-expanded={isAbstractExpanded}
-                                      aria-controls={abstractPanelId}
-                                    >
-                                      <span className="inline-flex items-center gap-2">
-                                        <BookOpen size={16} />
-                                        {publication.keywords?.length ? 'Abstract & Keywords' : 'Abstract'}
-                                      </span>
-                                      <ChevronDown size={18} className={`flex-shrink-0 transition-transform duration-200 ${isAbstractExpanded ? 'rotate-180' : ''}`} />
-                                    </button>
+                                    <div className="flex justify-end">
+                                      <button
+                                        type="button"
+                                        onClick={() => toggleAbstract(publication.id)}
+                                        className={`group inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wide transition-colors ${
+                                          isAbstractExpanded ? 'text-primary-700' : 'text-gray-500 hover:text-primary-700'
+                                        }`}
+                                        aria-expanded={isAbstractExpanded}
+                                        aria-controls={abstractPanelId}
+                                      >
+                                        <span>{publication.keywords?.length ? 'Abstract & Keywords' : 'Abstract'}</span>
+                                        <span className={`w-7 h-7 rounded-full flex items-center justify-center transition-colors ${
+                                          isAbstractExpanded ? 'bg-primary-600 text-white' : 'bg-primary-50 text-primary-600 group-hover:bg-primary-100'
+                                        }`}>
+                                          <ChevronDown size={16} className={`transition-transform duration-200 ${isAbstractExpanded ? 'rotate-180' : ''}`} />
+                                        </span>
+                                      </button>
+                                    </div>
 
                                     <AnimatePresence initial={false}>
                                       {isAbstractExpanded && (
@@ -1022,15 +1033,15 @@ const AcademicProfile = () => {
                                           transition={{ duration: 0.25 }}
                                           className="overflow-hidden"
                                         >
-                                          <div className="mt-3 rounded-lg bg-gray-50 border border-gray-200 p-5">
+                                          <div className="mt-4 border-l-2 border-primary-300 pl-4 sm:pl-5">
                                             <h5 className="text-sm font-semibold uppercase tracking-wide text-primary-700 mb-2">Abstract</h5>
-                                            <p className="text-sm text-gray-700 leading-relaxed">{publication.abstract}</p>
+                                            <p className="text-sm text-gray-600 leading-7">{publication.abstract}</p>
                                             {publication.keywords?.length > 0 && (
                                               <div className="mt-4">
                                                 <h5 className="text-sm font-semibold uppercase tracking-wide text-primary-700 mb-2">Keywords</h5>
                                                 <div className="flex flex-wrap gap-2">
                                                   {publication.keywords.map((keyword) => (
-                                                    <span key={keyword} className="text-xs text-primary-700 bg-white border border-primary-200 px-2.5 py-1 rounded-full">
+                                                    <span key={keyword} className="text-xs text-primary-700 bg-primary-50 px-2.5 py-1 rounded-full">
                                                       {keyword}
                                                     </span>
                                                   ))}
