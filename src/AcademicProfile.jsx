@@ -15,6 +15,7 @@ const AcademicProfile = () => {
   const [expandedAbstracts, setExpandedAbstracts] = useState({});
 
   const highlightAuthor = (authors, name) => {
+    if (!authors) return null;
     const parts = authors.split(name);
     if (parts.length === 1) return authors;
     return parts.map((part, i) => (
@@ -58,6 +59,7 @@ const AcademicProfile = () => {
   ];
 
   const recentNews = [
+    { date: "Aug 2026", title: "NCA 2026 Top Paper", content: "Paper 'Falling for AI' was named a Top Paper by the Human Communication and Technology Division at NCA 2026." },
     { date: "Jul 2026", title: "Paper Published in Computers in Human Behavior", content: "Published first-authored paper 'When Social Media Memes Become Mean to Peers' in Computers in Human Behavior." },
     { date: "May 2026", title: "Named Hunan Outstanding Graduate Student", content: "Received the Hunan Province Outstanding Graduate Student honor on May 29, 2026." },
     { date: "Mar 2026", title: "Paper Accepted by CSCW 2026", content: "Paper 'Constructing Algorithmic Authority' accepted to The 29th ACM Conference on Computer-Supported Cooperative Work and Social Computing." },
@@ -66,6 +68,7 @@ const AcademicProfile = () => {
 
   // 处理作者显示：只显示前三个作者，后面加et al.
   const formatAuthors = (authors) => {
+    if (!authors) return null;
     const authorList = authors.split(',');
     if (authorList.length <= 3) {
       return authors;
@@ -165,6 +168,7 @@ const AcademicProfile = () => {
       { year: "2024", title: "Migrant Youth Aged 16 to 19 During Social Crises: Stress, Deviant Behavior, and Identification with Mainstream Society", authors: "Hua Zhong, Qing Xiao, Rongyi Chen, Jingjia Xiao", venue: "Huxiang Law Review", doi: "https://mp.weixin.qq.com/s/fjACER5Um7StLb4HSPKXpA" }
     ],
     conferences: [
+      { year: "2026", title: "Falling for AI: The Sexual Objectification of Emerging AI-Generated Virtual Influencers and Its Impact on Online Parasocial Relationships", authors: "Rongyi Chen, Qing Xiao, Jingjia Xiao, Zilu Wang, Bingbing Zhang, Zhicong Lu", venue: "112th National Communication Association Annual Convention (NCA 2026)", location: "New Orleans, USA", award: "Top Paper, Human Communication and Technology Division" },
       { year: "2025", title: "When Social Media Memes Become Mean to Peers: Discrimination Recognition and Group Norms in Adolescent Bullying", authors: "Rongyi Chen, Qing Xiao, Shike Lin, Menghan Yin, Jingjia Xiao, Hua Zhong, Bingbing Zhang", venue: "2025 Association for Education in Journalism and Mass Communication (AEJMC) 108th Annual Conference", location: "San Francisco, USA", award: "Second Place Faculty Paper Award, Mass Communication and Society Division" },
       { year: "2025", title: "Responsible LLMs in Persuasive Health Message: Comparing Language Biases in General LLMs and Healthcare LLMs", authors: "Rongyi Chen, Honghua Pan, Ni Yuan, Yalong Xiao, Jie Feng", venue: "2025 the 75th Annual Conference of the International Communication Association (ICA)", location: "Denver, USA" },
       { year: "2025", title: "The Artists and Their Poor: Economic Inequality in China's Post-Pandemic Art Subsidy Policies", authors: "Jingjia Xiao, Qing Xiao, Rongyi Chen", venue: "2025 the 75th Annual Conference of the International Communication Association (ICA)", location: "Denver, USA" },
@@ -420,6 +424,7 @@ const AcademicProfile = () => {
       ].filter(p =>
         p.title === "The Digital Landscape of God: Narrative, Visuals and Viewer Engagement of Religious Videos on YouTube" ||
         p.title === "Constructing Algorithmic Authority: How Multi-Channel Networks (MCNs) Govern Live-Streaming Labor in China" ||
+        p.title === "Falling for AI: The Sexual Objectification of Emerging AI-Generated Virtual Influencers and Its Impact on Online Parasocial Relationships" ||
         (p.title === "When Social Media Memes Become Mean to Peers: Discrimination Recognition and Group Norms in Adolescent Bullying" && p.venue === "Computers in Human Behavior") ||
         p.title === "Responsible LLMs in Persuasive Health Message: Comparing Language Biases in General LLMs and Healthcare LLMs" ||
         p.title === "How AI Constructs Disaster Narratives: A Comparative Analysis of LLMs in Multimodal Disaster News Production" ||
@@ -445,6 +450,7 @@ const AcademicProfile = () => {
 
   const newsData = {
     academic: [
+      { date: "2026-08-10", title: "🏆 Named a Top Paper at NCA 2026!", content: "Paper 'Falling for AI: The Sexual Objectification of Emerging AI-Generated Virtual Influencers and Its Impact on Online Parasocial Relationships' was accepted as a Top Paper by the Human Communication and Technology Division for presentation at the 112th National Communication Association Annual Convention, held November 19–22, 2026, in New Orleans." },
       { date: "2026-07-16", title: "📄 Paper Published in Computers in Human Behavior!", content: "Published first-authored paper 'When Social Media Memes Become Mean to Peers: Discrimination Recognition and Group Norms in Adolescent Bullying' in Computers in Human Behavior." },
       { date: "2026-05-29", title: "🏆 Named Hunan Outstanding Graduate Student!", content: "Received the Hunan Province Outstanding Graduate Student honor." },
       { date: "2026-03-18", title: "🎉 Paper Accepted by CSCW 2026!", content: "Paper 'Constructing Algorithmic Authority: How Multi-Channel Networks (MCNs) Govern Live-Streaming Labor in China' accepted to The 29th ACM Conference on Computer-Supported Cooperative Work and Social Computing (CSCW 2026)." },
@@ -807,6 +813,13 @@ const AcademicProfile = () => {
 
                     <h3 className="text-xl font-semibold text-gray-800 mt-8 mb-4">Awards & Honors</h3>
                     <div className="space-y-3">
+                      <div className="flex items-start gap-2">
+                        <span className="text-primary-600">🏆</span>
+                        <div>
+                          <p className="font-medium text-gray-800">Top Paper, Human Communication and Technology Division</p>
+                          <p className="text-sm text-gray-600">National Communication Association (NCA), 2026</p>
+                        </div>
+                      </div>
                       <div className="flex items-start gap-2">
                         <span className="text-primary-600">🏆</span>
                         <div>
@@ -1196,8 +1209,8 @@ const AcademicProfile = () => {
                         <span className="text-4xl">🎉</span>
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold mb-2">Latest Updates July 2026</h3>
-                        <p className="text-primary-100">New paper published in Computers in Human Behavior, and now a Ph.D. student at Peking University!</p>
+                        <h3 className="text-xl font-bold mb-2">Latest Updates August 2026</h3>
+                        <p className="text-primary-100">New Top Paper at NCA 2026 and a recent publication in Computers in Human Behavior!</p>
                       </div>
                     </div>
                   </div>
